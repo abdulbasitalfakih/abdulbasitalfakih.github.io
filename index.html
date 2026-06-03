@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Basit Al Fakih | TJKT Portfolio · Cloud & Network Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f0f4f9;
+            font-family: 'Inter', sans-serif;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+
+        .master {
+            max-width: 1440px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        /* NAVBAR PREMIUM */
+        .nav-premium {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .logo-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f2b3d, #1e6f5c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #334155;
+            text-decoration: none;
+            padding: 0.5rem 1.2rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            background: #e6f4f1;
+            color: #1e6f5c;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a:active {
+            transform: translateY(0);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-left {
+            flex: 2;
+        }
+
+        .hero-left .greeting {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1e6f5c;
+            font-weight: 600;
+        }
+
+        .hero-left h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin: 0.5rem 0;
+            line-height: 1.2;
+            color: #0f2b3d;
+        }
+
+        .hero-left h1 span {
+            color: #1e6f5c;
+            border-bottom: 3px solid #1e6f5c;
+        }
+
+        .hero-left .title {
+            font-size: 1.1rem;
+            color: #334155;
+            margin: 0.75rem 0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .contact-chip {
+            background: #f1f5f9;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #0f2b3d;
+            transition: all 0.3s ease;
+        }
+
+        .contact-chip:hover {
+            background: #e6f4f1;
+            transform: translateX(3px);
+        }
+
+        .contact-chip i {
+            color: #1e6f5c;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #1e6f5c;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #0f5a49;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -8px #1e6f5c;
+        }
+
+        .btn-outline {
+            border: 1.5px solid #1e6f5c;
+            background: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #1e6f5c;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: #e6f4f1;
+            transform: translateY(-2px);
+        }
+
+        /* FOTO KECIL */
+        .hero-right {
+            flex: 0.5;
+            text-align: center;
+        }
+
+        .small-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+            background: #e2e8f0;
+            transition: all 0.4s ease;
+        }
+
+        .small-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
+        }
+
+        /* SECTION UMUM */
+        .section-block {
+            padding: 2.5rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #0f2b3d;
+        }
+
+        .section-title i {
+            color: #1e6f5c;
+            font-size: 1.5rem;
+        }
+
+        /* GRID SKILL */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .skill-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.12);
+            border-color: #1e6f5c;
+        }
+
+        .skill-icon-large {
+            font-size: 2.2rem;
+            width: 50px;
+            text-align: center;
+        }
+
+        .skill-content h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .skill-content p {
+            font-size: 0.8rem;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.6rem;
+        }
+
+        .skill-tags span {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 0.15rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .skill-tags span:hover {
+            background: #1e6f5c;
+            color: white;
+            border-color: #1e6f5c;
+        }
+
+        /* PROYEK GRID */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+            border-color: #1e6f5c;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: #cbd5e1;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.02);
+        }
+
+        .project-card h4 {
+            padding: 1rem 1rem 0.3rem 1rem;
+            font-size: 1rem;
+        }
+
+        .project-card p {
+            padding: 0 1rem 1rem 1rem;
+            font-size: 0.8rem;
+            color: #475569;
+        }
+
+        /* SERTIFIKAT GALLERY - KHUSUS SERTIFIKAT SAJA */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .cert-card {
+            background: #f8fafc;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+            border-color: #1e6f5c;
+        }
+
+        .cert-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            background: #e2e8f0;
+            transition: transform 0.4s ease;
+        }
+
+        .cert-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .cert-card .cert-name {
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #0f2b3d;
+        }
+
+        .cert-card .cert-date {
+            font-size: 0.7rem;
+            color: #1e6f5c;
+            padding-bottom: 1rem;
+        }
+
+        /* KONTAK */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-wrapper > div {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-wrapper > div:hover {
+            transform: translateX(5px);
+            color: #1e6f5c;
+        }
+
+        .motivation-box {
+            margin-top: 1.5rem;
+            background: #e6f4f1;
+            padding: 1rem;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .motivation-box:hover {
+            background: #d0eae4;
+            transform: scale(1.01);
+        }
+
+        .footer {
+            background: #0f2b3d;
+            text-align: center;
+            padding: 1.8rem;
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 800px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-left {
+                text-align: center;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .section-block {
+                padding: 1.8rem 1.2rem;
+            }
+            .nav-links a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* efek scroll highlight */
+        .section-block {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="master">
+
+    <!-- NAVBAR - klik indah ke setiap section -->
+    <div class="nav-premium">
+        <div class="logo-name">ABDUL BASIT · TJKT ENGINEER</div>
+        <div class="nav-links">
+            <a href="#home">🏠 Beranda</a>
+            <a href="#skills">⚡ Skill</a>
+            <a href="#proyek">🚀 Proyek</a>
+            <a href="#sertifikat">📜 Sertifikat</a>
+            <a href="#kontak">📞 Kontak</a>
+        </div>
+    </div>
+
+    <!-- HOME SECTION -->
+    <div class="hero-section" id="home">
+        <div class="hero-left">
+            <div class="greeting"><i class="fas fa-code"></i> HI, SAYA SIAP PKL!</div>
+            <h1>Abdul Basit <br><span>Al Fakih</span></h1>
+            <div class="title">🔥 Cloud Engineer · Network Specialist · Cybersecurity Enthusiast</div>
+            <div class="contact-info">
+                <div class="contact-chip"><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
+                <div class="contact-chip"><i class="fab fa-whatsapp"></i> 085771082319</div>
+                <div class="contact-chip"><i class="fas fa-map-marker-alt"></i> Bogor, Indonesia</div>
+                <div class="contact-chip"><i class="fas fa-school"></i> SMK Wikrama Bogor</div>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download CV (Canva)</a>
+                <a href="#" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img class="small-photo" src="https://via.placeholder.com/140x140?text=FOTO+ABDUL" alt="Abdul Basit">
+        </div>
+    </div>
+
+    <!-- SKILLS TJKT -->
+    <div class="section-block" id="skills">
+        <div class="section-title"><i class="fas fa-microchip"></i> Kompetensi TJKT · Yang Saya Kuasai</div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon-large"><i class="fab fa-aws"></i></div>
+                <div class="skill-content">
+                    <h4>AWS Cloud</h4>
+                    <p>EC2, S3, IAM, VPC. Saya pernah deploy web server dan kelola security group.</p>
+                    <div class="skill-tags"><span>EC2</span><span>S3</span><span>IAM</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-large"><i class="fas fa-router"></i></div>
+                <div class="skill-content">
+                    <h4>MikroTik · RouterOS</h4>
+                    <p>Routing, NAT, Firewall, Bandwidth Management, Hotspot, VLAN.</p>
+                    <div class="skill-tags"><span>NAT</span><span>Firewall</span><span>VLAN</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-large"><i class="fab fa-linux"></i></div>
+                <div class="skill-content">
+                    <h4>Debian Server</h4>
+                    <p>LAMP Stack, DNS (Bind9), DHCP, SSH, FTP, Bash Script.</p>
+                    <div class="skill-tags"><span>Apache</span><span>Bind9</span><span>Bash</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-large"><i class="fas fa-shield-haltered"></i></div>
+                <div class="skill-content">
+                    <h4>Cybersecurity</h4>
+                    <p>Nmap, Firewall Hardening, OWASP Top 10, Wireshark, Kali Linux.</p>
+                    <div class="skill-tags"><span>Nmap</span><span>Wireshark</span><span>Kali</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-large"><i class="fab fa-wordpress"></i></div>
+                <div class="skill-content">
+                    <h4>WordPress</h4>
+                    <p>Custom Theme, Elementor, SEO, WooCommerce, Migration.</p>
+                    <div class="skill-tags"><span>Elementor</span><span>WooCommerce</span><span>SEO</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-large"><i class="fas fa-code"></i></div>
+                <div class="skill-content">
+                    <h4>Web Development</h4>
+                    <p>HTML, CSS, JavaScript, PHP, MySQL, Responsive Design.</p>
+                    <div class="skill-tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROYEK -->
+    <div class="section-block" id="proyek">
+        <div class="section-title"><i class="fas fa-rocket"></i> Proyek TJKT · Yang Telah Saya Kerjakan</div>
+        <div class="project-grid">
+            <div class="project-card">
+                <img class="project-img" src="https://via.placeholder.com/400x160?text=AWS+EC2+Deployment" alt="AWS Project">
+                <h4>🌩️ Deploy Web di AWS EC2</h4>
+                <p>Mendeploy website portfolio menggunakan EC2, security group, dan domain routing.</p>
+            </div>
+            <div class="project-card">
+                <img class="project-img" src="https://via.placeholder.com/400x160?text=MikroTik+VLAN" alt="MikroTik">
+                <h4>🔄 Simulasi Jaringan MikroTik</h4>
+                <p>VLAN, routing antar VLAN, bandwidth management, firewall filtering di RouterOS.</p>
+            </div>
+            <div class="project-card">
+                <img class="project-img" src="https://via.placeholder.com/400x160?text=Debian+Server+LAMP" alt="Debian">
+                <h4>🐧 Debian Server LAMP Stack</h4>
+                <p>Instalasi Apache, MySQL, PHP, konfigurasi virtual host dan backup cron job.</p>
+            </div>
+            <div class="project-card">
+                <img class="project-img" src="https://via.placeholder.com/400x160?text=Cybersecurity+Nmap" alt="Cybersecurity">
+                <h4>🛡️ Vulnerability Assessment Lab</h4>
+                <p>Menggunakan Nmap & OpenVAS untuk scanning dan hardening jaringan.</p>
+            </div>
+            <div class="project-card">
+                <img class="project-img" src="https://via.placeholder.com/400x160?text=WordPress+Website" alt="WordPress">
+                <h4>📝 Website Profil + WordPress CMS</h4>
+                <p>Custom theme, Elementor, contact form, dan optimasi SEO.</p>
+            </div>
+            <div class="project-card">
+                <img class="project-img" src="https://via.placeholder.com/400x160?text=Portofolio+CEO" alt="Portofolio">
+                <h4>✨ Portofolio Web (Website ini)</h4>
+                <p>HTML/CSS modern, full responsive, desain premium ala CEO.</p>
+            </div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color: #5f6f8a;"><i class="fas fa-image"></i> Ganti semua gambar placeholder dengan screenshot proyek aslimu ya!</p>
+    </div>
+
+    <!-- SERTIFIKAT - KHUSUS SERTIFIKAT SAJA YANG DI KLIK -->
+    <div class="section-block" id="sertifikat">
+        <div class="section-title"><i class="fas fa-award"></i> Sertifikat & Penghargaan</div>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/400x170?text=AWS+Cloud+Foundation" alt="AWS Sertifikat">
+                <div class="cert-name">✅ AWS Cloud Foundation</div>
+                <div class="cert-date">Amazon Web Services · 2025</div>
+            </div>
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/400x170?text=MikroTik+MTCNA" alt="MikroTik Sertifikat">
+                <div class="cert-name">✅ MikroTik MTCNA</div>
+                <div class="cert-date">MikroTik Academy · 2025</div>
+            </div>
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/400x170?text=Cybersecurity+Cisco" alt="Cyber Sertifikat">
+                <div class="cert-name">✅ Cybersecurity Fundamental</div>
+                <div class="cert-date">Cisco Networking Academy · 2025</div>
+            </div>
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/400x170?text=WordPress+Expert" alt="WordPress Sertifikat">
+                <div class="cert-name">✅ WordPress Expert Certification</div>
+                <div class="cert-date">BNSP/LSP · 2025</div>
+            </div>
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/400x170?text=Debian+Server+Admin" alt="Debian Sertifikat">
+                <div class="cert-name">✅ Debian Server Administration</div>
+                <div class="cert-date">Linux Professional Institute · 2025</div>
+            </div>
+            <div class="cert-card">
+                <img src="https://via.placeholder.com/400x170?text=Network+Security+Fundamental" alt="Network Security">
+                <div class="cert-name">✅ Network Security Fundamental</div>
+                <div class="cert-date">Cisco · 2025</div>
+            </div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color: #5f6f8a;"><i class="fas fa-image"></i> Ganti semua placeholder dengan foto sertifikat aslimu! Klik sertifikat untuk melihat detail</p>
+    </div>
+
+    <!-- KONTAK -->
+    <div class="section-block" id="kontak">
+        <div class="section-title"><i class="fas fa-paper-plane"></i> Hubungi Saya — Siap PKL & Kolaborasi</div>
+        <div class="contact-wrapper">
+            <div><i class="fas fa-envelope" style="color:#1e6f5c;"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
+            <div><i class="fab fa-whatsapp" style="color:#1e6f5c;"></i> 085771082319</div>
+            <div><i class="fab fa-github" style="color:#1e6f5c;"></i> github/abdulbasit-tjkt</div>
+            <div><i class="fab fa-instagram" style="color:#1e6f5c;"></i> @abdulbasit_</div>
+        </div>
+        <div class="motivation-box">
+            🚀 "Bangun infrastruktur, amankan jaringan, deploy ke cloud — itulah yang saya lakukan setiap hari. Siap berkontribusi di PKL dan industri."
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT · Cloud · Network · Security
+    </div>
+</div>
+
+<!-- Tambahan efek smooth + alert kalau klik sertifikat -->
+<script>
+    // Efek ketika klik card sertifikat (hanya sertifikat yang muncul alert)
+    document.querySelectorAll('.cert-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const title = this.querySelector('.cert-name')?.innerText || 'Sertifikat';
+            alert(`📜 ${title}\n\nIni adalah sertifikat asli milik Abdul Basit Al Fakih.\n\n(Silakan ganti gambar dengan sertifikat aslimu di kode HTML)`);
+        });
+    });
+
+    // Efek hover tambahan untuk navbar smooth
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
