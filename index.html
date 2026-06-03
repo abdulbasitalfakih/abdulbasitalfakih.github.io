@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Basit Al Fakih | TJKT Portfolio · Cloud & Network Engineer</title>
+    <title>Abdul Basit Al Fakih | TJKT Portfolio · SMK Wikrama Bogor</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -30,7 +30,7 @@
             background: #ffffff;
         }
 
-        /* NAVBAR PREMIUM */
+        /* NAVBAR PREMIUM DENGAN LOGO */
         .nav-premium {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -43,11 +43,22 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-wikrama {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
         }
 
         .logo-name {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #0f2b3d, #1e6f5c);
             -webkit-background-clip: text;
@@ -69,7 +80,6 @@
             font-size: 0.9rem;
             border-radius: 40px;
             transition: all 0.3s ease;
-            position: relative;
         }
 
         .nav-links a:hover {
@@ -78,27 +88,42 @@
             transform: translateY(-2px);
         }
 
-        .nav-links a:active {
-            transform: translateY(0);
-        }
-
-        /* HERO SECTION */
+        /* HERO DENGAN FOTO DI KIRI */
         .hero-section {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
+            gap: 3rem;
             padding: 2.5rem 2rem;
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
             border-bottom: 1px solid #e2e8f0;
+            flex-wrap: wrap;
         }
 
         .hero-left {
+            flex: 0.8;
+            text-align: center;
+        }
+
+        .big-photo {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 32px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .big-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 50px -12px rgba(0,0,0,0.25);
+        }
+
+        .hero-right {
             flex: 2;
         }
 
-        .hero-left .greeting {
+        .hero-right .greeting {
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -106,7 +131,7 @@
             font-weight: 600;
         }
 
-        .hero-left h1 {
+        .hero-right h1 {
             font-size: 2.8rem;
             font-weight: 800;
             margin: 0.5rem 0;
@@ -114,12 +139,12 @@
             color: #0f2b3d;
         }
 
-        .hero-left h1 span {
+        .hero-right h1 span {
             color: #1e6f5c;
             border-bottom: 3px solid #1e6f5c;
         }
 
-        .hero-left .title {
+        .hero-right .title {
             font-size: 1.1rem;
             color: #334155;
             margin: 0.75rem 0;
@@ -140,7 +165,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #0f2b3d;
             transition: all 0.3s ease;
         }
 
@@ -172,8 +196,6 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -192,7 +214,6 @@
             font-weight: 600;
             font-size: 0.85rem;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .btn-outline:hover {
@@ -200,33 +221,10 @@
             transform: translateY(-2px);
         }
 
-        /* FOTO KECIL */
-        .hero-right {
-            flex: 0.5;
-            text-align: center;
-        }
-
-        .small-photo {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
-            background: #e2e8f0;
-            transition: all 0.4s ease;
-        }
-
-        .small-photo:hover {
-            transform: scale(1.02);
-            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
-        }
-
         /* SECTION UMUM */
         .section-block {
             padding: 2.5rem 2rem;
             border-bottom: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
         }
 
         .section-title {
@@ -244,7 +242,7 @@
             font-size: 1.5rem;
         }
 
-        /* GRID SKILL */
+        /* SKILL GRID */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -260,7 +258,6 @@
             align-items: flex-start;
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .skill-card:hover {
@@ -284,7 +281,7 @@
         .skill-content p {
             font-size: 0.8rem;
             color: #475569;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .skill-tags {
@@ -301,29 +298,21 @@
             border-radius: 20px;
             font-size: 0.65rem;
             font-weight: 500;
-            transition: all 0.2s;
         }
 
-        .skill-tags span:hover {
-            background: #1e6f5c;
-            color: white;
-            border-color: #1e6f5c;
-        }
-
-        /* PROYEK GRID */
+        /* PROYEK DENGAN PENJELASAN DETAIL */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.8rem;
         }
 
         .project-card {
             background: #f8fafc;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .project-card:hover {
@@ -334,28 +323,41 @@
 
         .project-img {
             width: 100%;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
             background: #cbd5e1;
-            transition: transform 0.4s ease;
-        }
-
-        .project-card:hover .project-img {
-            transform: scale(1.02);
         }
 
         .project-card h4 {
-            padding: 1rem 1rem 0.3rem 1rem;
-            font-size: 1rem;
+            padding: 1rem 1rem 0.5rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
         }
 
-        .project-card p {
-            padding: 0 1rem 1rem 1rem;
+        .project-card .project-detail {
+            padding: 0 1rem 0.5rem 1rem;
             font-size: 0.8rem;
             color: #475569;
+            line-height: 1.5;
         }
 
-        /* SERTIFIKAT GALLERY - KHUSUS SERTIFIKAT SAJA */
+        .project-card .tech-stack {
+            padding: 0 1rem 1rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-stack span {
+            background: #e6f4f1;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1e6f5c;
+        }
+
+        /* SERTIFIKAT */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -373,7 +375,7 @@
         }
 
         .cert-card:hover {
-            transform: translateY(-6px) scale(1.02);
+            transform: translateY(-6px);
             box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
             border-color: #1e6f5c;
         }
@@ -383,18 +385,12 @@
             height: 170px;
             object-fit: cover;
             background: #e2e8f0;
-            transition: transform 0.4s ease;
-        }
-
-        .cert-card:hover img {
-            transform: scale(1.03);
         }
 
         .cert-card .cert-name {
-            padding: 1rem;
+            padding: 1rem 1rem 0.3rem;
             font-weight: 700;
             font-size: 0.85rem;
-            color: #0f2b3d;
         }
 
         .cert-card .cert-date {
@@ -412,12 +408,10 @@
             background: #f1f5f9;
             padding: 1.5rem;
             border-radius: 24px;
-            transition: all 0.3s ease;
         }
 
         .contact-wrapper > div {
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .contact-wrapper > div:hover {
@@ -432,12 +426,6 @@
             border-radius: 20px;
             text-align: center;
             font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .motivation-box:hover {
-            background: #d0eae4;
-            transform: scale(1.01);
         }
 
         .footer {
@@ -446,6 +434,17 @@
             padding: 1.8rem;
             font-size: 0.75rem;
             color: #94a3b8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
         }
 
         @media (max-width: 800px) {
@@ -453,7 +452,7 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .hero-left {
+            .hero-right {
                 text-align: center;
             }
             .contact-info {
@@ -465,24 +464,19 @@
             .section-block {
                 padding: 1.8rem 1.2rem;
             }
-            .nav-links a {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
-            }
-        }
-
-        /* efek scroll highlight */
-        .section-block {
-            scroll-margin-top: 80px;
         }
     </style>
 </head>
 <body>
 <div class="master">
 
-    <!-- NAVBAR - klik indah ke setiap section -->
+    <!-- NAVBAR DENGAN LOGO SMK WIKRAMA -->
     <div class="nav-premium">
-        <div class="logo-name">ABDUL BASIT · TJKT ENGINEER</div>
+        <div class="logo-area">
+            <!-- LOGO SMK WIKRAMA BOGOR - GANTI LINK INI DENGAN LOGO ASLI -->
+            <img class="logo-wikrama" src="https://via.placeholder.com/40x40?text=WIKRAMA" alt="Logo SMK Wikrama Bogor">
+            <div class="logo-name">ABDUL BASIT · TJKT</div>
+        </div>
         <div class="nav-links">
             <a href="#home">🏠 Beranda</a>
             <a href="#skills">⚡ Skill</a>
@@ -492,9 +486,13 @@
         </div>
     </div>
 
-    <!-- HOME SECTION -->
+    <!-- HERO DENGAN FOTO DI SEBELAH KIRI -->
     <div class="hero-section" id="home">
         <div class="hero-left">
+            <!-- FOTO KAMU - GANTI LINK INI -->
+            <img class="big-photo" src="https://via.placeholder.com/400x400?text=FOTO+ABDUL+BASIT" alt="Abdul Basit Al Fakih">
+        </div>
+        <div class="hero-right">
             <div class="greeting"><i class="fas fa-code"></i> HI, SAYA SIAP PKL!</div>
             <h1>Abdul Basit <br><span>Al Fakih</span></h1>
             <div class="title">🔥 Cloud Engineer · Network Specialist · Cybersecurity Enthusiast</div>
@@ -509,9 +507,6 @@
                 <a href="#" class="btn-outline"><i class="fab fa-github"></i> GitHub</a>
                 <a href="#" class="btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
-        </div>
-        <div class="hero-right">
-            <img class="small-photo" src="https://via.placeholder.com/140x140?text=FOTO+ABDUL" alt="Abdul Basit">
         </div>
     </div>
 
@@ -570,45 +565,99 @@
         </div>
     </div>
 
-    <!-- PROYEK -->
+    <!-- PROYEK DENGAN PENJELASAN DETAIL YANG PERNAH DIKERJAKAN -->
     <div class="section-block" id="proyek">
         <div class="section-title"><i class="fas fa-rocket"></i> Proyek TJKT · Yang Telah Saya Kerjakan</div>
         <div class="project-grid">
+            
             <div class="project-card">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=AWS+EC2+Deployment" alt="AWS Project">
-                <h4>🌩️ Deploy Web di AWS EC2</h4>
-                <p>Mendeploy website portfolio menggunakan EC2, security group, dan domain routing.</p>
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=AWS+EC2+Deployment" alt="AWS EC2 Project">
+                <h4>🌩️ Deploy Web Server di AWS EC2</h4>
+                <div class="project-detail">
+                    Proyek ini saya kerjakan untuk memahami cloud computing. Saya membuat instance EC2 t2.micro, mengkonfigurasi security group untuk membuka port HTTP/SSH, dan mendeploy website statis menggunakan Apache. Saya juga mengatur Elastic IP agar website bisa diakses secara publik.
+                </div>
+                <div class="tech-stack">
+                    <span>AWS EC2</span>
+                    <span>Apache</span>
+                    <span>Security Group</span>
+                    <span>Linux</span>
+                </div>
             </div>
+
             <div class="project-card">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=MikroTik+VLAN" alt="MikroTik">
-                <h4>🔄 Simulasi Jaringan MikroTik</h4>
-                <p>VLAN, routing antar VLAN, bandwidth management, firewall filtering di RouterOS.</p>
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=MikroTik+VLAN+Network" alt="MikroTik Project">
+                <h4>🔄 Simulasi Jaringan Kantor MikroTik</h4>
+                <div class="project-detail">
+                    Saya membangun simulasi jaringan kantor dengan 3 departemen (IT, HR, Finance) menggunakan VLAN di MikroTik RouterOS. Konfigurasi mencakup routing antar VLAN, firewall filter untuk membatasi akses, bandwidth management menggunakan queue tree, dan hotspot untuk guest wifi.
+                </div>
+                <div class="tech-stack">
+                    <span>MikroTik RouterOS</span>
+                    <span>VLAN</span>
+                    <span>Firewall</span>
+                    <span>Queue Tree</span>
+                </div>
             </div>
+
             <div class="project-card">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=Debian+Server+LAMP" alt="Debian">
-                <h4>🐧 Debian Server LAMP Stack</h4>
-                <p>Instalasi Apache, MySQL, PHP, konfigurasi virtual host dan backup cron job.</p>
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=Debian+Server" alt="Debian Server Project">
+                <h4>🐧 Debian Server LAMP & DNS Server</h4>
+                <div class="project-detail">
+                    Proyek ini mengimplementasikan server Debian 11 sebagai web server dan DNS server. Saya menginstal LAMP stack (Apache, MySQL, PHP), mengkonfigurasi virtual host untuk multiple domain, serta setup Bind9 untuk DNS internal. Semua dikelola via SSH dan diotomatisasi dengan bash script untuk backup.
+                </div>
+                <div class="tech-stack">
+                    <span>Debian 11</span>
+                    <span>Apache2</span>
+                    <span>Bind9</span>
+                    <span>Bash Script</span>
+                </div>
             </div>
+
             <div class="project-card">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=Cybersecurity+Nmap" alt="Cybersecurity">
-                <h4>🛡️ Vulnerability Assessment Lab</h4>
-                <p>Menggunakan Nmap & OpenVAS untuk scanning dan hardening jaringan.</p>
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=Cybersecurity+Lab" alt="Cybersecurity Project">
+                <h4>🛡️ Vulnerability Assessment & Hardening Lab</h4>
+                <div class="project-detail">
+                    Saya melakukan vulnerability scanning menggunakan Nmap dan OpenVAS pada jaringan lab. Hasil scanning dianalisis lalu dilakukan hardening: menutup port tidak terpakai, mengkonfigurasi firewall iptables, dan menerapkan best practice keamanan server. Proyek ini meningkatkan pemahaman saya tentang keamanan siber.
+                </div>
+                <div class="tech-stack">
+                    <span>Nmap</span>
+                    <span>OpenVAS</span>
+                    <span>IPTables</span>
+                    <span>Kali Linux</span>
+                </div>
             </div>
+
             <div class="project-card">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=WordPress+Website" alt="WordPress">
-                <h4>📝 Website Profil + WordPress CMS</h4>
-                <p>Custom theme, Elementor, contact form, dan optimasi SEO.</p>
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=WordPress+Website" alt="WordPress Project">
+                <h4>📝 Website Profil Sekolah dengan WordPress</h4>
+                <div class="project-detail">
+                    Saya membangun website profil sekolah menggunakan WordPress. Proyek ini mencakup instalasi WordPress di server lokal, kustomisasi theme dengan Elementor, integrasi Google Maps, form kontak, dan optimasi SEO menggunakan Yoast SEO. Website juga saya migrasi ke hosting online.
+                </div>
+                <div class="tech-stack">
+                    <span>WordPress</span>
+                    <span>Elementor</span>
+                    <span>MySQL</span>
+                    <span>SEO</span>
+                </div>
             </div>
+
             <div class="project-card">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=Portofolio+CEO" alt="Portofolio">
-                <h4>✨ Portofolio Web (Website ini)</h4>
-                <p>HTML/CSS modern, full responsive, desain premium ala CEO.</p>
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=Portofolio+CEO" alt="Portofolio Project">
+                <h4>✨ Portofolio Web CEO (Website Ini)</h4>
+                <div class="project-detail">
+                    Website portofolio ini saya buat dari nol menggunakan HTML, CSS, dan JavaScript murni. Desain mengadopsi gaya modern ala CEO dengan warna cerah, efek hover yang halus, navigasi smooth scroll, serta responsif untuk semua perangkat. Ini adalah karya terbaru saya untuk keperluan PKL.
+                </div>
+                <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsive</span>
+                </div>
             </div>
         </div>
-        <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color: #5f6f8a;"><i class="fas fa-image"></i> Ganti semua gambar placeholder dengan screenshot proyek aslimu ya!</p>
+        <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color: #5f6f8a;"><i class="fas fa-image"></i> Ganti semua gambar placeholder dengan screenshot proyek aslimu ya, Basit!</p>
     </div>
 
-    <!-- SERTIFIKAT - KHUSUS SERTIFIKAT SAJA YANG DI KLIK -->
+    <!-- SERTIFIKAT -->
     <div class="section-block" id="sertifikat">
         <div class="section-title"><i class="fas fa-award"></i> Sertifikat & Penghargaan</div>
         <div class="cert-grid">
@@ -635,10 +684,10 @@
             <div class="cert-card">
                 <img src="https://via.placeholder.com/400x170?text=Debian+Server+Admin" alt="Debian Sertifikat">
                 <div class="cert-name">✅ Debian Server Administration</div>
-                <div class="cert-date">Linux Professional Institute · 2025</div>
+                <div class="cert-date">Linux Professional · 2025</div>
             </div>
             <div class="cert-card">
-                <img src="https://via.placeholder.com/400x170?text=Network+Security+Fundamental" alt="Network Security">
+                <img src="https://via.placeholder.com/400x170?text=Network+Security" alt="Network Security">
                 <div class="cert-name">✅ Network Security Fundamental</div>
                 <div class="cert-date">Cisco · 2025</div>
             </div>
@@ -656,26 +705,27 @@
             <div><i class="fab fa-instagram" style="color:#1e6f5c;"></i> @abdulbasit_</div>
         </div>
         <div class="motivation-box">
-            🚀 "Bangun infrastruktur, amankan jaringan, deploy ke cloud — itulah yang saya lakukan setiap hari. Siap berkontribusi di PKL dan industri."
+            🚀 "Dari server Debian hingga cloud AWS, dari routing MikroTik hingga cybersecurity — saya siap membawa skill terbaik saya untuk PKL dan industri. SMK Wikrama Bogor, siap berkarya!"
         </div>
     </div>
 
     <div class="footer">
+        <img src="https://via.placeholder.com/30x30?text=W" alt="Logo Wikrama">
         © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT · Cloud · Network · Security
+        <img src="https://via.placeholder.com/30x30?text=W" alt="Logo Wikrama">
     </div>
 </div>
 
-<!-- Tambahan efek smooth + alert kalau klik sertifikat -->
 <script>
-    // Efek ketika klik card sertifikat (hanya sertifikat yang muncul alert)
+    // Efek klik pada sertifikat
     document.querySelectorAll('.cert-card').forEach(card => {
         card.addEventListener('click', function() {
             const title = this.querySelector('.cert-name')?.innerText || 'Sertifikat';
-            alert(`📜 ${title}\n\nIni adalah sertifikat asli milik Abdul Basit Al Fakih.\n\n(Silakan ganti gambar dengan sertifikat aslimu di kode HTML)`);
+            alert(`📜 ${title}\n\nIni adalah sertifikat asli milik Abdul Basit Al Fakih.\n\n(Silakan ganti gambar placeholder dengan sertifikat aslimu di kode HTML)`);
         });
     });
 
-    // Efek hover tambahan untuk navbar smooth
+    // Smooth scroll untuk navbar
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
