@@ -31,46 +31,6 @@
             position: relative;
         }
 
-        /* LOGO WIKRAMA VERTIKAL KECIL DI UJUNG ATAS KANAN */
-        .wikrama-logo-corner {
-            position: fixed;
-            top: 15px;
-            right: 20px;
-            z-index: 9999;
-            background: white;
-            padding: 5px 8px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            line-height: 1;
-            border: 1px solid #e2e8f0;
-        }
-
-        .wikrama-logo-corner:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            border-color: #1e6f5c;
-        }
-
-        .wikrama-logo-corner .logo-text {
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 0px;
-            color: #1e6f5c;
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-        }
-
-        .wikrama-logo-corner .logo-text span {
-            font-size: 10px;
-            font-weight: 500;
-            color: #0f2b3d;
-            margin-top: 2px;
-        }
-
         /* NAVBAR PREMIUM */
         .nav-premium {
             background: rgba(255, 255, 255, 0.98);
@@ -90,6 +50,40 @@
             display: flex;
             align-items: center;
             gap: 12px;
+        }
+
+        /* LOGO WIKRAMA VERTIKAL KECIL - LANGSUNG DARI KODE (TIDAK PERLU UPLOAD GAMBAR) */
+        .wikrama-logo-inline {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            background: linear-gradient(135deg, #0f2b3d, #1e6f5c);
+            padding: 4px 6px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .wikrama-logo-inline:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(30,111,92,0.3);
+        }
+
+        .wikrama-logo-inline .letter {
+            font-size: 10px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        .wikrama-logo-inline .small-text {
+            font-size: 6px;
+            font-weight: 500;
+            color: #b0d4c8;
+            text-align: center;
+            margin-top: 2px;
         }
 
         .logo-name {
@@ -160,18 +154,17 @@
             flex: 2;
         }
 
-        .hero-right .greeting {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #1e6f5c;
-            font-weight: 600;
+        .name-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
         }
 
         .hero-right h1 {
             font-size: 2.8rem;
             font-weight: 800;
-            margin: 0.5rem 0;
             line-height: 1.2;
             color: #0f2b3d;
         }
@@ -179,6 +172,15 @@
         .hero-right h1 span {
             color: #1e6f5c;
             border-bottom: 3px solid #1e6f5c;
+        }
+
+        .hero-right .greeting {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1e6f5c;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .hero-right .title {
@@ -283,7 +285,7 @@
             font-size: 1.5rem;
         }
 
-        /* SKILL GRID - SEMUA BISA DIKLIK */
+        /* SKILL GRID */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -341,16 +343,14 @@
             font-size: 0.65rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.2s;
         }
 
         .skill-tags span:hover {
             background: #1e6f5c;
             color: white;
-            border-color: #1e6f5c;
         }
 
-        /* PROYEK DENGAN PENJELASAN DETAIL - SEMUA BISA DIKLIK */
+        /* PROYEK */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -377,11 +377,6 @@
             height: 180px;
             object-fit: cover;
             background: #cbd5e1;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover .project-img {
-            transform: scale(1.02);
         }
 
         .project-card h4 {
@@ -411,16 +406,9 @@
             font-size: 0.7rem;
             font-weight: 500;
             color: #1e6f5c;
-            cursor: pointer;
-            transition: all 0.2s;
         }
 
-        .tech-stack span:hover {
-            background: #1e6f5c;
-            color: white;
-        }
-
-        /* SERTIFIKAT - SEMUA BISA DIKLIK */
+        /* SERTIFIKAT */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -448,11 +436,6 @@
             height: 170px;
             object-fit: cover;
             background: #e2e8f0;
-            transition: transform 0.3s ease;
-        }
-
-        .cert-card:hover img {
-            transform: scale(1.02);
         }
 
         .cert-card .cert-name {
@@ -467,7 +450,7 @@
             padding-bottom: 1rem;
         }
 
-        /* KONTAK - SEMUA BISA DIKLIK */
+        /* KONTAK */
         .contact-wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -523,6 +506,9 @@
             .hero-right {
                 text-align: center;
             }
+            .name-wrapper {
+                justify-content: center;
+            }
             .contact-info {
                 justify-content: center;
             }
@@ -532,31 +518,26 @@
             .section-block {
                 padding: 1.8rem 1.2rem;
             }
-            .wikrama-logo-corner {
-                top: 10px;
-                right: 10px;
-                padding: 4px 6px;
-            }
-            .wikrama-logo-corner .logo-text {
-                font-size: 10px;
-            }
         }
     </style>
 </head>
 <body>
 <div class="master">
 
-    <!-- LOGO WIKRAMA VERTIKAL KECIL DI UJUNG ATAS KANAN - BISA DIKLIK -->
-    <div class="wikrama-logo-corner" onclick="alert('🏫 SMK Wikrama Bogor\n\nSekolah Kejuruan unggulan yang mencetak generasi digital siap kerja.\n\nwww.smkwikrama.sch.id')">
-        <div class="logo-text">
-            W<br>I<br>K<br>R<br>A<br>M<br>A
-            <span>BOGOR</span>
-        </div>
-    </div>
-
     <!-- NAVBAR -->
     <div class="nav-premium">
         <div class="logo-area">
+            <!-- LOGO WIKRAMA VERTIKAL - SUDAH LANGSUNG DI KODE, TIDAK PERLU UPLOAD GAMBAR -->
+            <div class="wikrama-logo-inline" onclick="alert('🏫 SMK Wikrama Bogor\n\nSekolah Kejuruan unggulan\nJl. Raya Wangun No.21, Bogor\n\nwww.smkwikrama.sch.id')">
+                <div class="letter">W</div>
+                <div class="letter">I</div>
+                <div class="letter">K</div>
+                <div class="letter">R</div>
+                <div class="letter">A</div>
+                <div class="letter">M</div>
+                <div class="letter">A</div>
+                <div class="small-text">BOGOR</div>
+            </div>
             <div class="logo-name">ABDUL BASIT · TJKT</div>
         </div>
         <div class="nav-links">
@@ -575,7 +556,9 @@
         </div>
         <div class="hero-right">
             <div class="greeting"><i class="fas fa-code"></i> HI, SAYA SIAP PKL!</div>
-            <h1>Abdul Basit <br><span>Al Fakih</span></h1>
+            <div class="name-wrapper">
+                <h1>Abdul Basit <br><span>Al Fakih</span></h1>
+            </div>
             <div class="title">🔥 Cloud Engineer · Network Specialist · Cybersecurity Enthusiast</div>
             <div class="contact-info">
                 <div class="contact-chip" onclick="copyToClipboard('abdulbasitalfakih@smkwikrama.sch.id')"><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
@@ -646,95 +629,112 @@
         </div>
     </div>
 
-    <!-- PROYEK DENGAN PENJELASAN DETAIL -->
+    <!-- PROYEK -->
     <div class="section-block" id="proyek">
         <div class="section-title"><i class="fas fa-rocket"></i> Proyek TJKT · Yang Telah Saya Kerjakan</div>
         <div class="project-grid">
-            <div class="project-card" onclick="alert('🌩️ Deploy Web Server di AWS EC2\n\nDetail: Saya membuat instance EC2 t2.micro, mengkonfigurasi security group untuk membuka port HTTP/SSH, dan mendeploy website statis menggunakan Apache. Mengatur Elastic IP agar website bisa diakses publik.')">
-                <img class="project-img" src="https://via.placeholder.com/400x180?text=AWS+EC2+Deployment" alt="AWS EC2 Project">
+            <div class="project-card" onclick="alert('🌩️ Deploy Web Server di AWS EC2\n\nDetail: Instance EC2 t2.micro, konfigurasi security group, deploy website statis dengan Apache, Elastic IP.')">
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=AWS+EC2+Deployment" alt="AWS EC2">
                 <h4>🌩️ Deploy Web Server di AWS EC2</h4>
-                <div class="project-detail">
-                    Proyek ini saya kerjakan untuk memahami cloud computing. Saya membuat instance EC2 t2.micro, mengkonfigurasi security group untuk membuka port HTTP/SSH, dan mendeploy website statis menggunakan Apache.
-                </div>
-                <div class="tech-stack"><span>AWS EC2</span><span>Apache</span><span>Security Group</span><span>Linux</span></div>
+                <div class="project-detail">Membuat instance EC2, konfigurasi security group, deploy website statis dengan Apache.</div>
+                <div class="tech-stack"><span>AWS EC2</span><span>Apache</span><span>Security Group</span></div>
             </div>
-            <div class="project-card" onclick="alert('🔄 Simulasi Jaringan Kantor MikroTik\n\nDetail: Membangun jaringan dengan 3 departemen (IT, HR, Finance) menggunakan VLAN. Konfigurasi routing antar VLAN, firewall filter, bandwidth management queue tree, dan hotspot guest wifi.')">
-                <img class="project-img" src="https://via.placeholder.com/400x180?text=MikroTik+VLAN+Network" alt="MikroTik Project">
+            <div class="project-card" onclick="alert('🔄 Simulasi Jaringan Kantor MikroTik\n\nDetail: VLAN 3 departemen, routing antar VLAN, firewall filter, queue tree, hotspot.')">
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=MikroTik+VLAN" alt="MikroTik">
                 <h4>🔄 Simulasi Jaringan Kantor MikroTik</h4>
-                <div class="project-detail">
-                    Saya membangun simulasi jaringan kantor dengan 3 departemen menggunakan VLAN di MikroTik RouterOS. Konfigurasi mencakup routing antar VLAN dan firewall filter.
-                </div>
-                <div class="tech-stack"><span>MikroTik RouterOS</span><span>VLAN</span><span>Firewall</span><span>Queue Tree</span></div>
+                <div class="project-detail">VLAN 3 departemen, routing antar VLAN, firewall filter, bandwidth management.</div>
+                <div class="tech-stack"><span>MikroTik</span><span>VLAN</span><span>Firewall</span><span>Queue Tree</span></div>
             </div>
-            <div class="project-card" onclick="alert('🐧 Debian Server LAMP & DNS Server\n\nDetail: Implementasi server Debian 11 sebagai web server dan DNS server. Instalasi LAMP stack, virtual host untuk multiple domain, setup Bind9 untuk DNS internal.')">
-                <img class="project-img" src="https://via.placeholder.com/400x180?text=Debian+Server" alt="Debian Server Project">
+            <div class="project-card" onclick="alert('🐧 Debian Server LAMP & DNS\n\nDetail: Debian 11, LAMP stack, virtual host, Bind9 DNS server, backup bash script.')">
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=Debian+Server" alt="Debian">
                 <h4>🐧 Debian Server LAMP & DNS Server</h4>
-                <div class="project-detail">
-                    Proyek ini mengimplementasikan server Debian 11 sebagai web server dan DNS server. Saya menginstal LAMP stack dan mengkonfigurasi virtual host.
-                </div>
-                <div class="tech-stack"><span>Debian 11</span><span>Apache2</span><span>Bind9</span><span>Bash Script</span></div>
+                <div class="project-detail">Debian 11 sebagai web server dan DNS server, LAMP stack, Bind9.</div>
+                <div class="tech-stack"><span>Debian</span><span>Apache2</span><span>Bind9</span><span>Bash</span></div>
             </div>
-            <div class="project-card" onclick="alert('🛡️ Vulnerability Assessment & Hardening Lab\n\nDetail: Vulnerability scanning menggunakan Nmap dan OpenVAS. Hasil dianalisis lalu hardening: menutup port tidak terpakai, konfigurasi firewall iptables.')">
-                <img class="project-img" src="https://via.placeholder.com/400x180?text=Cybersecurity+Lab" alt="Cybersecurity Project">
-                <h4>🛡️ Vulnerability Assessment & Hardening Lab</h4>
-                <div class="project-detail">
-                    Saya melakukan vulnerability scanning menggunakan Nmap dan OpenVAS, lalu melakukan hardening: menutup port tidak terpakai dan mengkonfigurasi firewall.
-                </div>
-                <div class="tech-stack"><span>Nmap</span><span>OpenVAS</span><span>IPTables</span><span>Kali Linux</span></div>
+            <div class="project-card" onclick="alert('🛡️ Vulnerability Assessment Lab\n\nDetail: Nmap & OpenVAS scanning, analisis, hardening: tutup port, iptables.')">
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=Cybersecurity+Lab" alt="Cyber">
+                <h4>🛡️ Vulnerability Assessment & Hardening</h4>
+                <div class="project-detail">Scanning Nmap & OpenVAS, analisis, hardening jaringan dan server.</div>
+                <div class="tech-stack"><span>Nmap</span><span>OpenVAS</span><span>IPTables</span><span>Kali</span></div>
             </div>
-            <div class="project-card" onclick="alert('📝 Website Profil Sekolah dengan WordPress\n\nDetail: Instalasi WordPress, kustomisasi theme dengan Elementor, integrasi Google Maps, form kontak, optimasi SEO dengan Yoast SEO.')">
-                <img class="project-img" src="https://via.placeholder.com/400x180?text=WordPress+Website" alt="WordPress Project">
-                <h4>📝 Website Profil Sekolah dengan WordPress</h4>
-                <div class="project-detail">
-                    Saya membangun website profil sekolah menggunakan WordPress, kustomisasi theme dengan Elementor, dan optimasi SEO.
-                </div>
+            <div class="project-card" onclick="alert('📝 Website WordPress\n\nDetail: Instalasi WP, custom theme Elementor, Google Maps, SEO Yoast.')">
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=WordPress+Website" alt="WordPress">
+                <h4>📝 Website Profil Sekolah WordPress</h4>
+                <div class="project-detail">Website profil sekolah dengan WordPress, Elementor, optimasi SEO.</div>
                 <div class="tech-stack"><span>WordPress</span><span>Elementor</span><span>MySQL</span><span>SEO</span></div>
             </div>
-            <div class="project-card" onclick="alert('✨ Portofolio Web CEO (Website Ini)\n\nDetail: Website portofolio dari nol menggunakan HTML, CSS, JavaScript. Desain modern ala CEO, warna cerah, efek hover halus, smooth scroll, responsif.')">
-                <img class="project-img" src="https://via.placeholder.com/400x180?text=Portofolio+CEO" alt="Portofolio Project">
+            <div class="project-card" onclick="alert('✨ Portofolio Web CEO\n\nDetail: HTML/CSS/JS murni, desain modern, efek hover, smooth scroll, responsif.')">
+                <img class="project-img" src="https://via.placeholder.com/400x180?text=Portofolio+CEO" alt="Portofolio">
                 <h4>✨ Portofolio Web CEO (Website Ini)</h4>
-                <div class="project-detail">
-                    Website portofolio ini saya buat dari nol menggunakan HTML, CSS, dan JavaScript murni dengan desain modern ala CEO.
-                </div>
+                <div class="project-detail">Portofolio dari nol dengan HTML/CSS/JS, desain ala CEO.</div>
                 <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
             </div>
         </div>
-        <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color: #5f6f8a;"><i class="fas fa-image"></i> Klik card proyek untuk lihat detail lengkap! Ganti gambar placeholder dengan screenshot aslimu.</p>
+        <p style="margin-top:1rem;font-size:0.7rem;text-align:center;color:#5f6f8a;"><i class="fas fa-image"></i> Ganti gambar placeholder dengan screenshot aslimu. Klik card untuk detail!</p>
     </div>
 
     <!-- SERTIFIKAT -->
     <div class="section-block" id="sertifikat">
         <div class="section-title"><i class="fas fa-award"></i> Sertifikat & Penghargaan</div>
         <div class="cert-grid">
-            <div class="cert-card" onclick="alert('📜 AWS Cloud Foundation\n\nSertifikat resmi dari Amazon Web Services\nDikeluarkan: 2025\nKompetensi: Cloud Computing dasar, EC2, S3, IAM')">
-                <img src="https://via.placeholder.com/400x170?text=AWS+Cloud+Foundation" alt="AWS Sertifikat">
+            <div class="cert-card" onclick="alert('📜 AWS Cloud Foundation\n\nAmazon Web Services · 2025')">
+                <img src="https://via.placeholder.com/400x170?text=AWS+Cloud+Foundation" alt="AWS">
                 <div class="cert-name">✅ AWS Cloud Foundation</div>
                 <div class="cert-date">Amazon Web Services · 2025</div>
             </div>
-            <div class="cert-card" onclick="alert('📜 MikroTik MTCNA\n\nMikroTik Certified Network Associate\nDikeluarkan: 2025\nKompetensi: Routing, NAT, Firewall, VLAN, Bandwidth Management')">
-                <img src="https://via.placeholder.com/400x170?text=MikroTik+MTCNA" alt="MikroTik Sertifikat">
+            <div class="cert-card" onclick="alert('📜 MikroTik MTCNA\n\nMikroTik Academy · 2025')">
+                <img src="https://via.placeholder.com/400x170?text=MikroTik+MTCNA" alt="MikroTik">
                 <div class="cert-name">✅ MikroTik MTCNA</div>
                 <div class="cert-date">MikroTik Academy · 2025</div>
             </div>
-            <div class="cert-card" onclick="alert('📜 Cybersecurity Fundamental\n\nCisco Networking Academy\nDikeluarkan: 2025\nKompetensi: Keamanan jaringan, ancaman siber, praktik keamanan')">
-                <img src="https://via.placeholder.com/400x170?text=Cybersecurity+Cisco" alt="Cyber Sertifikat">
+            <div class="cert-card" onclick="alert('📜 Cybersecurity Fundamental\n\nCisco Networking Academy · 2025')">
+                <img src="https://via.placeholder.com/400x170?text=Cybersecurity+Cisco" alt="Cyber">
                 <div class="cert-name">✅ Cybersecurity Fundamental</div>
                 <div class="cert-date">Cisco Networking Academy · 2025</div>
             </div>
-            <div class="cert-card" onclick="alert('📜 WordPress Expert Certification\n\nBNSP/LSP\nDikeluarkan: 2025\nKompetensi: Instalasi, kustomisasi theme, plugin, SEO, migrasi')">
-                <img src="https://via.placeholder.com/400x170?text=WordPress+Expert" alt="WordPress Sertifikat">
+            <div class="cert-card" onclick="alert('📜 WordPress Expert\n\nBNSP/LSP · 2025')">
+                <img src="https://via.placeholder.com/400x170?text=WordPress+Expert" alt="WordPress">
                 <div class="cert-name">✅ WordPress Expert Certification</div>
                 <div class="cert-date">BNSP/LSP · 2025</div>
             </div>
-            <div class="cert-card" onclick="alert('📜 Debian Server Administration\n\nLinux Professional Institute\nDikeluarkan: 2025\nKompetensi: LAMP Stack, Bind9, DHCP, SSH, Bash Script')">
-                <img src="https://via.placeholder.com/400x170?text=Debian+Server+Admin" alt="Debian Sertifikat">
+            <div class="cert-card" onclick="alert('📜 Debian Server Admin\n\nLinux Professional · 2025')">
+                <img src="https://via.placeholder.com/400x170?text=Debian+Server+Admin" alt="Debian">
                 <div class="cert-name">✅ Debian Server Administration</div>
                 <div class="cert-date">Linux Professional · 2025</div>
             </div>
-            <div class="cert-card" onclick="alert('📜 Network Security Fundamental\n\nCisco\nDikeluarkan: 2025\nKompetensi: Keamanan jaringan, firewall, IDS/IPS, VPN')">
-                <img src="https://via.placeholder.com/400x170?text=Network+Security" alt="Network Security">
+            <div class="cert-card" onclick="alert('📜 Network Security\n\nCisco · 2025')">
+                <img src="https://via.placeholder.com/400x170?text=Network+Security" alt="Network">
                 <div class="cert-name">✅ Network Security Fundamental</div>
                 <div class="cert-date">Cisco · 2025</div>
             </div>
         </div>
-        <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color: #5f6f8a
+        <p style="margin-top:1rem;font-size:0.7rem;text-align:center;color:#5f6f8a;"><i class="fas fa-image"></i> Ganti placeholder dengan sertifikat aslimu. Klik sertifikat untuk detail!</p>
+    </div>
+
+    <!-- KONTAK -->
+    <div class="section-block" id="kontak">
+        <div class="section-title"><i class="fas fa-paper-plane"></i> Hubungi Saya — Siap PKL & Kolaborasi</div>
+        <div class="contact-wrapper">
+            <div onclick="copyToClipboard('abdulbasitalfakih@smkwikrama.sch.id')"><i class="fas fa-envelope" style="color:#1e6f5c;"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
+            <div onclick="copyToClipboard('085771082319')"><i class="fab fa-whatsapp" style="color:#1e6f5c;"></i> 085771082319</div>
+            <div onclick="window.open('https://github.com/abdulbasit-tjkt', '_blank')"><i class="fab fa-github" style="color:#1e6f5c;"></i> github/abdulbasit-tjkt</div>
+            <div onclick="alert('📷 Instagram: @abdulbasit_')"><i class="fab fa-instagram" style="color:#1e6f5c;"></i> @abdulbasit_</div>
+        </div>
+        <div class="motivation-box" onclick="alert('🚀 Abdul Basit Al Fakih\n\nSiap memberikan kontribusi terbaik untuk PKL dan industri!')">
+            🚀 "Dari server Debian hingga cloud AWS, dari routing MikroTik hingga cybersecurity — saya siap membawa skill terbaik saya untuk PKL dan industri. SMK Wikrama Bogor, siap berkarya!"
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT · Cloud · Network · Security
+    </div>
+</div>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text);
+        alert('✅ ' + text + '\n\nSudah disalin! Silakan tempel di aplikasi yang dituju.');
+    }
+</script>
+</body>
+</html>
