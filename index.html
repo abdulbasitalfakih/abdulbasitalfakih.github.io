@@ -51,7 +51,7 @@
             gap: 10px;
         }
 
-        /* LOGO BULAT WARNA HIJAU - PERSIS KAYA LOGO SMK WIKRAMA */
+        /* LOGO BULAT WARNA HIJAU */
         .logo-bulat-wikrama {
             width: 38px;
             height: 38px;
@@ -63,21 +63,16 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .logo-bulat-wikrama:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(26,109,94,0.4);
         }
 
         .logo-bulat-wikrama span {
             color: white;
             font-size: 11px;
             font-weight: 800;
-            letter-spacing: 0.5px;
-            text-align: center;
-            line-height: 1.2;
         }
 
         .logo-name {
@@ -147,30 +142,6 @@
             gap: 12px;
             flex-wrap: wrap;
             margin-bottom: 5px;
-        }
-
-        .logo-bulat-wikrama-large {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(145deg, #1a6d5e, #0f5548);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .logo-bulat-wikrama-large:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-bulat-wikrama-large span {
-            color: white;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
         }
 
         .hero-right h1 {
@@ -253,10 +224,9 @@
             cursor: pointer;
         }
 
-        /* SECTION */
+        /* SECTION SKILL */
         .section-block {
             padding: 2rem 2rem;
-            border-bottom: 1px solid #e2e8f0;
         }
 
         .section-title {
@@ -273,19 +243,20 @@
             color: #1e6f5c;
         }
 
-        /* SKILL GRID */
+        /* GRID SKILL - SEMUA BISA DIKLIK */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
         }
 
         .skill-card {
             background: #f8fafc;
-            border-radius: 16px;
-            padding: 1rem;
+            border-radius: 20px;
+            padding: 1.2rem;
             display: flex;
-            gap: 0.8rem;
+            gap: 1rem;
             align-items: flex-start;
             border: 1px solid #e2e8f0;
             cursor: pointer;
@@ -293,91 +264,136 @@
         }
 
         .skill-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             border-color: #1e6f5c;
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.12);
         }
 
         .skill-icon-large {
-            font-size: 1.8rem;
-            width: 45px;
+            font-size: 2rem;
+            width: 50px;
             text-align: center;
         }
 
         .skill-content h4 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 0.3rem;
         }
 
         .skill-content p {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: #475569;
-            margin-top: 4px;
+            line-height: 1.4;
         }
 
-        /* PROYEK */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            background: #f8fafc;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            border-color: #1e6f5c;
-        }
-
-        .project-img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            background: #cbd5e1;
-        }
-
-        .project-card h4 {
-            padding: 0.8rem 1rem 0.3rem;
-            font-size: 1rem;
-        }
-
-        .project-card .project-detail {
-            padding: 0 1rem 0.5rem;
-            font-size: 0.75rem;
-            color: #475569;
-        }
-
-        .project-card .tech-stack {
-            padding: 0 1rem 0.8rem;
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.4rem;
+            margin-top: 0.6rem;
         }
 
-        .tech-stack span {
-            background: #e6f4f1;
+        .skill-tags span {
+            background: white;
+            border: 1px solid #cbd5e1;
             padding: 0.15rem 0.6rem;
             border-radius: 20px;
             font-size: 0.65rem;
+            font-weight: 500;
+        }
+
+        /* BOX PENJELASAN - MUNCUL SETELAH DIKLIK */
+        .explanation-box {
+            background: linear-gradient(135deg, #e6f4f1 0%, #d0eae4 100%);
+            border-radius: 24px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 6px solid #1e6f5c;
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .explanation-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .explanation-box h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0f2b3d;
+            margin-bottom: 0.8rem;
+        }
+
+        .explanation-box h3 i {
             color: #1e6f5c;
+            margin-right: 8px;
+        }
+
+        .explanation-box p {
+            font-size: 0.9rem;
+            color: #1e2b3a;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+
+        .explanation-list {
+            margin-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .explanation-list li {
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            color: #1e2b3a;
+        }
+
+        .close-explanation {
+            background: #1e6f5c;
+            color: white;
+            border: none;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            margin-top: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .close-explanation:hover {
+            background: #0f5a49;
         }
 
         /* SERTIFIKAT */
+        .cert-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .cert-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
 
         .cert-card {
             background: #f8fafc;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
             text-align: center;
@@ -386,23 +402,24 @@
         }
 
         .cert-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             border-color: #1e6f5c;
         }
 
         .cert-card img {
             width: 100%;
-            height: 150px;
+            height: 120px;
             object-fit: cover;
             background: #e2e8f0;
         }
 
         .cert-card .cert-name {
-            padding: 0.8rem;
+            padding: 0.6rem;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
 
+        /* KONTAK */
         .contact-wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -411,11 +428,17 @@
             background: #f1f5f9;
             padding: 1.2rem;
             border-radius: 20px;
+            margin-top: 1.5rem;
         }
 
         .contact-wrapper > div {
             cursor: pointer;
             font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .contact-wrapper > div:hover {
+            color: #1e6f5c;
         }
 
         .motivation-box {
@@ -435,6 +458,7 @@
             padding: 1.2rem;
             font-size: 0.7rem;
             color: #94a3b8;
+            margin-top: 1rem;
         }
 
         @media (max-width: 800px) {
@@ -463,16 +487,14 @@
     <!-- NAVBAR -->
     <div class="nav-premium">
         <div class="logo-area">
-            <!-- LOGO BULAT WARNA HIJAU - PERSIS SEPERTI YANG KAMU KIRIM -->
-            <div class="logo-bulat-wikrama" onclick="alert('🏫 SMK Wikrama Bogor\n\nJl. Raya Wangun No.21, Bogor\nTelp: (0251) 824241\nwww.smkwikrama.sch.id')">
+            <div class="logo-bulat-wikrama" onclick="alert('🏫 SMK Wikrama Bogor\n\nJl. Raya Wangun No.21, Bogor\nTelp: (0251) 824241')">
                 <span>W</span>
             </div>
             <div class="logo-name">ABDUL BASIT · TJKT</div>
         </div>
         <div class="nav-links">
             <a onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})">Beranda</a>
-            <a onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Skill</a>
-            <a onclick="document.getElementById('proyek').scrollIntoView({behavior:'smooth'})">Proyek</a>
+            <a onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Kompetensi</a>
             <a onclick="document.getElementById('sertifikat').scrollIntoView({behavior:'smooth'})">Sertifikat</a>
             <a onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})">Kontak</a>
         </div>
@@ -481,154 +503,241 @@
     <!-- HERO -->
     <div class="hero-section" id="home">
         <div class="hero-left">
-            <img class="big-photo" src="https://via.placeholder.com/300x300?text=FOTO+ABDUL" alt="Abdul Basit" onclick="alert('Abdul Basit Al Fakih\nSiswa TJKT SMK Wikrama Bogor')">
+            <img class="big-photo" src="https://via.placeholder.com/300x300?text=FOTO+ABDUL" alt="Abdul Basit" onclick="alert('Abdul Basit Al Fakih\nSiswa TJKT SMK Wikrama Bogor\nSiap PKL!')">
         </div>
         <div class="hero-right">
-            <div class="greeting"><i class="fas fa-code"></i> HI, SAYA SISWA TJKT</div>
+            <div class="greeting"><i class="fas fa-code"></i> HI, SAYA SIAP PKL!</div>
             <div class="name-row">
-                <!-- LOGO BULAT WARNA HIJAU DI SEBELAH KIRI NAMA ABDUL BASIT -->
-                <div class="logo-bulat-wikrama-large" onclick="alert('🏫 SMK Wikrama Bogor\n\nSekolah Kejuruan unggulan\nTerakreditasi A')">
-                    <span>W</span>
-                </div>
                 <h1>Abdul Basit <br><span>Al Fakih</span></h1>
             </div>
-            <div class="title">⚡ Networking · Server · Cybersecurity Enthusiast</div>
+            <div class="title">⚡ Networking · Server · Cybersecurity · Web Development</div>
             <div class="contact-info">
                 <div class="contact-chip" onclick="copyToClipboard('abdulbasitalfakih@smkwikrama.sch.id')"><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
                 <div class="contact-chip" onclick="copyToClipboard('085771082319')"><i class="fab fa-whatsapp"></i> 085771082319</div>
                 <div class="contact-chip" onclick="alert('SMK Wikrama Bogor\nJurusan TJKT\nAngkatan 2024-2027')"><i class="fas fa-school"></i> SMK Wikrama Bogor</div>
             </div>
             <div class="btn-group">
-                <a class="btn-primary" onclick="alert('CV Abdul Basit Al Fakih\nSiap untuk PKL')"><i class="fas fa-download"></i> Download CV</a>
-                <a class="btn-outline" onclick="window.open('https://github.com/', '_blank')"><i class="fab fa-github"></i> GitHub</a>
+                <a class="btn-primary" onclick="alert('📄 CV Abdul Basit Al Fakih\n\nSiap untuk PKL\n\nKlik OK untuk mendownload')"><i class="fas fa-download"></i> Download CV</a>
+                <a class="btn-outline" onclick="window.open('https://github.com/abdulbasit', '_blank')"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </div>
 
-    <!-- SKILL TJKT -->
+    <!-- KOMPETENSI TJKT - YANG SAYA KUASAI (SEMUA BISA DIKLIK) -->
     <div class="section-block" id="skills">
-        <div class="section-title"><i class="fas fa-microchip"></i> Skill TJKT · Yang Saya Kuasai</div>
+        <div class="section-title"><i class="fas fa-microchip"></i> Kompetensi TJKT · Yang Saya Kuasai</div>
         <div class="skills-grid">
-            <div class="skill-card" onclick="alert('MikroTik RouterOS\n✓ Routing & NAT\n✓ Firewall Filter\n✓ Bandwidth Management\n✓ Hotspot & VLAN')">
+            
+            <!-- MIKROTIK -->
+            <div class="skill-card" onclick="showExplanation('mikrotik')">
                 <div class="skill-icon-large"><i class="fas fa-router"></i></div>
                 <div class="skill-content">
                     <h4>MikroTik · RouterOS</h4>
-                    <p>Routing, NAT, Firewall, Bandwidth, Hotspot, VLAN</p>
+                    <p>Routing, NAT, Firewall, Bandwidth Management, Hotspot, VLAN</p>
+                    <div class="skill-tags"><span>Routing</span><span>NAT</span><span>Firewall</span><span>VLAN</span></div>
                 </div>
             </div>
-            <div class="skill-card" onclick="alert('Debian Server\n✓ LAMP Stack (Apache, MySQL, PHP)\n✓ DNS Server (Bind9)\n✓ DHCP Server\n✓ SSH & FTP')">
+
+            <!-- DEBIAN SERVER -->
+            <div class="skill-card" onclick="showExplanation('debian')">
                 <div class="skill-icon-large"><i class="fab fa-linux"></i></div>
                 <div class="skill-content">
                     <h4>Debian Server</h4>
-                    <p>LAMP Stack, Bind9 DNS, DHCP, SSH, FTP</p>
+                    <p>LAMP Stack, DNS (Bind9), DHCP, SSH, FTP, Bash Script</p>
+                    <div class="skill-tags"><span>Apache</span><span>Bind9</span><span>DHCP</span><span>Bash</span></div>
                 </div>
             </div>
-            <div class="skill-card" onclick="alert('Cybersecurity\n✓ Nmap Scanning\n✓ Firewall Hardening\n✓ Wireshark\n✓ Dasar Keamanan Jaringan')">
+
+            <!-- CYBERSECURITY -->
+            <div class="skill-card" onclick="showExplanation('cyber')">
                 <div class="skill-icon-large"><i class="fas fa-shield-haltered"></i></div>
                 <div class="skill-content">
                     <h4>Cybersecurity</h4>
-                    <p>Nmap, Firewall, Wireshark, Keamanan Jaringan</p>
+                    <p>Nmap, Firewall Hardening, Wireshark, Keamanan Jaringan</p>
+                    <div class="skill-tags"><span>Nmap</span><span>Firewall</span><span>Wireshark</span></div>
                 </div>
             </div>
-            <div class="skill-card" onclick="alert('WordPress\n✓ Instalasi WordPress\n✓ Custom Theme\n✓ Elementor\n✓ SEO Dasar')">
+
+            <!-- WORDPRESS -->
+            <div class="skill-card" onclick="showExplanation('wordpress')">
                 <div class="skill-icon-large"><i class="fab fa-wordpress"></i></div>
                 <div class="skill-content">
                     <h4>WordPress</h4>
-                    <p>Instalasi, Custom Theme, Elementor, SEO</p>
+                    <p>Instalasi, Custom Theme, Elementor, SEO, WooCommerce</p>
+                    <div class="skill-tags"><span>Elementor</span><span>SEO</span><span>WooCommerce</span></div>
                 </div>
             </div>
-            <div class="skill-card" onclick="alert('Web Development\n✓ HTML5 & CSS3\n✓ JavaScript Dasar\n✓ PHP & MySQL\n✓ Responsive Design')">
+
+            <!-- WEB DEVELOPMENT -->
+            <div class="skill-card" onclick="showExplanation('webdev')">
                 <div class="skill-icon-large"><i class="fas fa-code"></i></div>
                 <div class="skill-content">
                     <h4>Web Development</h4>
-                    <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+                    <p>HTML, CSS, JavaScript, PHP, MySQL, Responsive Design</p>
+                    <div class="skill-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span></div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- PROYEK -->
-    <div class="section-block" id="proyek">
-        <div class="section-title"><i class="fas fa-rocket"></i> Proyek TJKT · Yang Telah Saya Kerjakan</div>
-        <div class="project-grid">
-            <div class="project-card" onclick="alert('Simulasi Jaringan Kantor MikroTik\n\nMembuat jaringan dengan 3 VLAN (IT, HR, Finance), routing antar VLAN, firewall filter, dan bandwidth management.')">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=MikroTik+VLAN+Project" alt="MikroTik">
-                <h4>🔄 Simulasi Jaringan Kantor</h4>
-                <div class="project-detail">VLAN 3 departemen, routing antar VLAN, firewall, queue tree.</div>
-                <div class="tech-stack"><span>MikroTik</span><span>VLAN</span><span>Firewall</span></div>
-            </div>
-            <div class="project-card" onclick="alert('Debian Server LAMP Stack\n\nInstalasi Debian 11, Apache2, MySQL, PHP. Setup virtual host dan konfigurasi DNS dengan Bind9.')">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=Debian+Server" alt="Debian">
-                <h4>🐧 Debian Server LAMP + DNS</h4>
-                <div class="project-detail">Instalasi LAMP stack, virtual host, Bind9 DNS server.</div>
-                <div class="tech-stack"><span>Debian</span><span>Apache</span><span>Bind9</span></div>
-            </div>
-            <div class="project-card" onclick="alert('Vulnerability Assessment\n\nScanning jaringan menggunakan Nmap, analisis hasil scan, dan melakukan hardening firewall.')">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=Cybersecurity+Lab" alt="Cyber">
-                <h4>🛡️ Vulnerability Assessment Lab</h4>
-                <div class="project-detail">Scanning dengan Nmap, analisis, hardening firewall.</div>
-                <div class="tech-stack"><span>Nmap</span><span>Firewall</span><span>Kali Linux</span></div>
-            </div>
-            <div class="project-card" onclick="alert('Website Profil Sekolah\n\nMembangun website profil menggunakan WordPress, custom dengan Elementor, integrasi Google Maps.')">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=WordPress+Website" alt="WordPress">
-                <h4>📝 Website WordPress</h4>
-                <div class="project-detail">Website profil sekolah dengan WordPress & Elementor.</div>
-                <div class="tech-stack"><span>WordPress</span><span>Elementor</span><span>MySQL</span></div>
-            </div>
-            <div class="project-card" onclick="alert('Portofolio Web CEO\n\nMembuat website portofolio ini dari nol dengan HTML, CSS, JavaScript. Desain modern dan responsif.')">
-                <img class="project-img" src="https://via.placeholder.com/400x160?text=Portofolio+Web" alt="Portofolio">
-                <h4>✨ Portofolio Web (Ini!)</h4>
-                <div class="project-detail">Website portofolio dari nol, HTML/CSS/JS murni.</div>
-                <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
-            </div>
         </div>
-        <p style="margin-top:1rem;font-size:0.7rem;text-align:center;color:#5f6f8a;">Klik card proyek untuk lihat detail lengkapnya!</p>
+
+        <!-- BOX PENJELASAN - MUNCUL KETIKA DIKLIK -->
+        <div id="explanation-box" class="explanation-box">
+            <!-- Isinya akan berubah sesuai skill yang diklik -->
+        </div>
     </div>
 
     <!-- SERTIFIKAT -->
     <div class="section-block" id="sertifikat">
-        <div class="section-title"><i class="fas fa-award"></i> Sertifikat & Penghargaan</div>
+        <div class="cert-title"><i class="fas fa-award" style="color:#1e6f5c;"></i> Sertifikat & Penghargaan</div>
         <div class="cert-grid">
-            <div class="cert-card" onclick="alert('MikroTik MTCNA\n\nMikroTik Certified Network Associate\nDikeluarkan: 2025')">
-                <img src="https://via.placeholder.com/400x150?text=MikroTik+MTCNA" alt="MikroTik">
+            <div class="cert-card" onclick="alert('📜 MikroTik MTCNA\n\nMikroTik Certified Network Associate\nDikeluarkan: 2025\n\nKompetensi yang dikuasai:\n✓ Routing & NAT\n✓ Firewall Filter\n✓ Bandwidth Management\n✓ Hotspot & VLAN')">
+                <img src="https://via.placeholder.com/400x120?text=MikroTik+MTCNA" alt="MikroTik">
                 <div class="cert-name">✅ MikroTik MTCNA</div>
             </div>
-            <div class="cert-card" onclick="alert('Cybersecurity Fundamental\n\nCisco Networking Academy\nDikeluarkan: 2025')">
-                <img src="https://via.placeholder.com/400x150?text=Cybersecurity+Cisco" alt="Cyber">
+            <div class="cert-card" onclick="alert('📜 Cybersecurity Fundamental\n\nCisco Networking Academy\nDikeluarkan: 2025\n\nKompetensi yang dikuasai:\n✓ Network Security Dasar\n✓ Ancaman Siber\n✓ Praktik Keamanan Jaringan')">
+                <img src="https://via.placeholder.com/400x120?text=Cybersecurity+Cisco" alt="Cyber">
                 <div class="cert-name">✅ Cybersecurity Fundamental</div>
             </div>
-            <div class="cert-card" onclick="alert('Debian Server Administration\n\nLinux Professional Institute\nDikeluarkan: 2025')">
-                <img src="https://via.placeholder.com/400x150?text=Debian+Server" alt="Debian">
+            <div class="cert-card" onclick="alert('📜 Debian Server Administration\n\nLinux Professional Institute\nDikeluarkan: 2025\n\nKompetensi yang dikuasai:\n✓ LAMP Stack\n✓ Bind9 DNS\n✓ DHCP Server\n✓ Bash Script')">
+                <img src="https://via.placeholder.com/400x120?text=Debian+Server" alt="Debian">
                 <div class="cert-name">✅ Debian Server Administration</div>
             </div>
-            <div class="cert-card" onclick="alert('WordPress Expert\n\nBNSP/LSP\nDikeluarkan: 2025')">
-                <img src="https://via.placeholder.com/400x150?text=WordPress+Expert" alt="WordPress">
+            <div class="cert-card" onclick="alert('📜 WordPress Expert\n\nBNSP/LSP\nDikeluarkan: 2025\n\nKompetensi yang dikuasai:\n✓ Instalasi WordPress\n✓ Custom Theme\n✓ Elementor\n✓ SEO Optimization')">
+                <img src="https://via.placeholder.com/400x120?text=WordPress+Expert" alt="WordPress">
                 <div class="cert-name">✅ WordPress Expert</div>
             </div>
         </div>
-        <p style="margin-top:1rem;font-size:0.7rem;text-align:center;color:#5f6f8a;">Klik sertifikat untuk lihat detail. Ganti gambar dengan sertifikat aslimu!</p>
+        <p style="margin-top:1rem;font-size:0.7rem;text-align:center;color:#5f6f8a;">Klik sertifikat untuk lihat detail lengkapnya! Ganti gambar dengan sertifikat aslimu.</p>
     </div>
 
     <!-- KONTAK -->
     <div class="section-block" id="kontak">
-        <div class="section-title"><i class="fas fa-paper-plane"></i> Hubungi Saya</div>
         <div class="contact-wrapper">
             <div onclick="copyToClipboard('abdulbasitalfakih@smkwikrama.sch.id')"><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
             <div onclick="copyToClipboard('085771082319')"><i class="fab fa-whatsapp"></i> 085771082319</div>
-            <div onclick="window.open('https://github.com/', '_blank')"><i class="fab fa-github"></i> GitHub</div>
-            <div onclick="alert('@abdulbasit_')"><i class="fab fa-instagram"></i> @abdulbasit_</div>
+            <div onclick="window.open('https://github.com/abdulbasit', '_blank')"><i class="fab fa-github"></i> GitHub</div>
+            <div onclick="alert('📷 Instagram: @abdulbasit_')"><i class="fab fa-instagram"></i> @abdulbasit_</div>
         </div>
-        <div class="motivation-box" onclick="alert('Abdul Basit Al Fakih\nSiap PKL!')">
-            🚀 "Siap memberikan kontribusi terbaik selama PKL dengan skill TJKT yang saya miliki."
+        <div class="motivation-box" onclick="alert('Abdul Basit Al Fakih\n\nSiswa TJKT SMK Wikrama Bogor\nSiap memberikan kontribusi terbaik selama PKL!')">
+            🚀 "Saya siap memberikan kontribusi terbaik selama PKL dengan skill TJKT yang saya miliki. Dari networking, server, cybersecurity, hingga web development — saya siap belajar dan bekerja keras!"
         </div>
     </div>
 
     <div class="footer">
-        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT
+        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT · Networking · Server · Cybersecurity · Web Development
     </div>
 </div>
 
 <script>
+    // Data penjelasan setiap skill
+    const explanations = {
+        mikrotik: {
+            title: "MikroTik · RouterOS",
+            icon: "fa-solid fa-router",
+            description: "MikroTik RouterOS adalah sistem operasi untuk mengelola jaringan. Saya sudah menguasai berbagai fitur penting untuk kebutuhan jaringan skala kecil hingga menengah.",
+            details: [
+                "✓ Routing statis & dinamis (RIP, OSPF dasar)",
+                "✓ NAT (Network Address Translation) untuk sharing internet",
+                "✓ Firewall Filter untuk keamanan jaringan",
+                "✓ Bandwidth Management (Simple Queue & Queue Tree)",
+                "✓ Hotspot untuk manajemen pengguna wifi",
+                "✓ VLAN untuk segmentasi jaringan",
+                "✓ Bridge & Bonding untuk redundansi"
+            ]
+        },
+        debian: {
+            title: "Debian Server",
+            icon: "fa-brands fa-linux",
+            description: "Debian adalah distribusi Linux yang stabil dan banyak digunakan untuk server. Saya sudah menguasai administrasi server Debian untuk berbagai keperluan.",
+            details: [
+                "✓ Instalasi & konfigurasi Debian Server",
+                "✓ LAMP Stack (Apache2, MySQL/MariaDB, PHP)",
+                "✓ DNS Server menggunakan Bind9",
+                "✓ DHCP Server untuk pembagian IP otomatis",
+                "✓ SSH Server untuk remote akses aman",
+                "✓ FTP Server (vsftpd) untuk transfer file",
+                "✓ Bash scripting untuk automasi tugas",
+                "✓ Manajemen user & permission"
+            ]
+        },
+        cyber: {
+            title: "Cybersecurity",
+            icon: "fa-solid fa-shield-haltered",
+            description: "Keamanan siber adalah aspek penting dalam dunia TI. Saya mempelajari dasar-dasar keamanan jaringan dan praktik hardening untuk melindungi infrastruktur.",
+            details: [
+                "✓ Network scanning menggunakan Nmap",
+                "✓ Firewall hardening (iptables, MikroTik firewall)",
+                "✓ Analisis paket dengan Wireshark",
+                "✓ Dasar-dasar keamanan jaringan",
+                "✓ Vulnerability assessment sederhana",
+                "✓ Praktik secure configuration",
+                "✓ Dasar ethical hacking & footprinting"
+            ]
+        },
+        wordpress: {
+            title: "WordPress Development",
+            icon: "fa-brands fa-wordpress",
+            description: "WordPress adalah CMS terpopuler untuk membangun website. Saya mampu membuat website profesional menggunakan WordPress.",
+            details: [
+                "✓ Instalasi WordPress di localhost & hosting",
+                "✓ Kustomisasi theme dengan Elementor",
+                "✓ Manajemen plugin untuk fungsi tambahan",
+                "✓ SEO dasar menggunakan Yoast SEO",
+                "✓ Integrasi Google Maps & Contact Form",
+                "✓ WooCommerce dasar untuk toko online",
+                "✓ Backup & migrasi website"
+            ]
+        },
+        webdev: {
+            title: "Web Development",
+            icon: "fa-solid fa-code",
+            description: "Pengembangan web adalah fondasi untuk membangun aplikasi berbasis internet. Saya menguasai teknologi web dari front-end hingga back-end dasar.",
+            details: [
+                "✓ HTML5 & CSS3 untuk struktur & gaya",
+                "✓ JavaScript untuk interaktivitas",
+                "✓ PHP native untuk back-end",
+                "✓ MySQL untuk database",
+                "✓ Responsive design (mobile friendly)",
+                "✓ Bootstrap & Tailwind CSS",
+                "✓ CRUD (Create, Read, Update, Delete) sederhana"
+            ]
+        }
+    };
+
+    let currentShown = null;
+
+    function showExplanation(skillId) {
+        const data = explanations[skillId];
+        if (!data) return;
+
+        const box = document.getElementById('explanation-box');
+        
+        // Jika yang sama diklik lagi, tutup
+        if (currentShown === skillId) {
+            box.classList.remove('show');
+            currentShown = null;
+            return;
+        }
+
+        // Tampilkan penjelasan baru
+        box.innerHTML = `
+            <h3><i class="${data.icon}"></i> ${data.title}</h3>
+            <p>${data.description}</p>
+            <ul class="explanation-list">
+                ${data.details.map(d => `<li>${d}</li>`).join('')}
+            </ul>
+            <button class="close-explanation" onclick="closeExplanation()">✕ Tutup</button>
+        `;
+        box.classList.add('show');
+        currentShown = skillId;
+    }
+
+    function closeExplanation() {
+        const box = document.getElementById('explanation-box');
+        box.classList.remove('show');
+        currentShown = null;
+    }
+
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text);
         alert('✅ ' + text + '\n\nTersalin!');
