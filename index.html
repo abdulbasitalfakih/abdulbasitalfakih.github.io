@@ -7,11 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
@@ -25,14 +21,13 @@
             max-width: 1400px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 0;
             box-shadow: 0 0 50px rgba(0,0,0,0.05);
             position: relative;
             z-index: 1;
             min-height: 100vh;
         }
 
-        /* NAVBAR CERAH */
+        /* NAVBAR */
         .nav-premium {
             background: #ffffff;
             padding: 0.8rem 2rem;
@@ -44,7 +39,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
         }
 
         .logo-area {
@@ -62,7 +56,6 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
 
         .logo-bulat-wikrama span {
@@ -103,17 +96,9 @@
         }
 
         /* PAGE */
-        .page-container {
-            padding: 2rem;
-            min-height: 70vh;
-        }
-        .page {
-            display: none;
-            animation: fadeInUp 0.4s ease;
-        }
-        .page.active-page {
-            display: block;
-        }
+        .page-container { padding: 2rem; min-height: 70vh; }
+        .page { display: none; animation: fadeInUp 0.4s ease; }
+        .page.active-page { display: block; }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -126,7 +111,6 @@
             border: 1px solid #e2e8f0;
             padding: 2rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
         .white-card:hover {
             box-shadow: 0 12px 30px rgba(0,0,0,0.08);
@@ -146,10 +130,8 @@
             border: 1px solid #e2e8f0;
         }
 
-        .hero-left {
-            flex: 0.8;
-            text-align: center;
-        }
+        .hero-left { flex: 0.8; text-align: center; }
+        .hero-right { flex: 2; }
 
         .photo-upload-area {
             position: relative;
@@ -164,7 +146,6 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #1e6f5c;
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
             background: #f1f5f9;
         }
 
@@ -184,11 +165,7 @@
             border: 2px solid white;
         }
 
-        .hero-right h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #0f2b3d;
-        }
+        .hero-right h1 { font-size: 2.5rem; font-weight: 800; color: #0f2b3d; }
         .hero-right h1 span { color: #1e6f5c; border-bottom: 3px solid #1e6f5c; }
 
         .greeting-badge {
@@ -213,7 +190,6 @@
             padding: 0.3rem 1rem;
             border-radius: 40px;
             font-size: 0.75rem;
-            font-weight: 500;
             color: #1e6f5c;
         }
 
@@ -245,6 +221,16 @@
             cursor: pointer;
         }
 
+        .btn-outline {
+            background: white;
+            border: 1.5px solid #1e6f5c;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            color: #1e6f5c;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
         .back-button {
             background: #f1f5f9;
             border: none;
@@ -259,7 +245,7 @@
             color: #1e6f5c;
         }
 
-        /* STATS GRID - SEPERTI YANG KAMU KIRIM */
+        /* STATS */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -273,13 +259,9 @@
             text-align: center;
             border: 1px solid #e2e8f0;
         }
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #1e6f5c;
-        }
+        .stat-number { font-size: 1.8rem; font-weight: 800; color: #1e6f5c; }
 
-        /* SKILL GRID */
+        /* SKILL */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -309,10 +291,8 @@
             align-items: center;
             justify-content: center;
         }
-        .skill-content h4 { font-size: 1rem; font-weight: 700; color: #0f2b3d; }
-        .skill-content p { font-size: 0.7rem; color: #475569; }
 
-        /* PROJECT */
+        /* PROYEK */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -376,10 +356,7 @@
             word-break: break-all;
             text-align: center;
         }
-        .cert-info {
-            padding: 1rem;
-            text-align: center;
-        }
+        .cert-info { padding: 1rem; text-align: center; }
         .cert-name { font-weight: 700; font-size: 0.8rem; color: #0f2b3d; }
 
         /* GALERI */
@@ -414,28 +391,37 @@
         }
         .galeri-item i { font-size: 2rem; color: #1e6f5c; }
 
-        /* CV PAGE */
-        .cv-section { display: flex; flex-wrap: wrap; gap: 2rem; }
-        .cv-left { flex: 1.2; }
-        .cv-right { flex: 0.8; }
-        .cv-header { text-align: center; margin-bottom: 1.5rem; }
-        .cv-photo-small {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #1e6f5c;
-            margin-bottom: 1rem;
+        /* CV UPLOAD PAGE - KHUSUS */
+        .cv-upload-area {
+            border: 2px dashed #cbd5e1;
+            border-radius: 24px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f8fafc;
         }
-        .cv-section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #1e6f5c;
-            border-left: 4px solid #1e6f5c;
-            padding-left: 12px;
-            margin: 1.5rem 0 1rem;
+        .cv-upload-area:hover {
+            border-color: #1e6f5c;
+            background: #e6f4f1;
         }
-        .cv-item { margin-bottom: 0.5rem; }
+        .cv-upload-area i { font-size: 3rem; color: #1e6f5c; margin-bottom: 1rem; }
+        .cv-preview {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .cv-preview iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        .download-cv-btn {
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
 
         .footer {
             background: #f8fafc;
@@ -449,7 +435,7 @@
         @media (max-width: 800px) {
             .page-container { padding: 1rem; }
             .hero-section { flex-direction: column; text-align: center; }
-            .cv-section { flex-direction: column; }
+            .cv-preview iframe { height: 400px; }
         }
     </style>
 </head>
@@ -471,7 +457,7 @@
             <a onclick="showPage('proyek')"><i class="fas fa-rocket"></i> Proyek</a>
             <a onclick="showPage('sertifikat')"><i class="fas fa-award"></i> Sertifikat</a>
             <a onclick="showPage('galeri')"><i class="fas fa-images"></i> Galeri</a>
-            <a onclick="showPage('cv')"><i class="fas fa-file-alt"></i> CV</a>
+            <a onclick="showPage('cv')"><i class="fas fa-file-alt"></i> CV Saya</a>
             <a onclick="showPage('kontak')"><i class="fas fa-envelope"></i> Kontak</a>
         </div>
     </div>
@@ -505,7 +491,7 @@
     <!-- PAGE CONTAINER -->
     <div class="page-container">
         
-        <!-- HOME - STATS CARD SEPERTI YANG KAMU KIRIM -->
+        <!-- HOME -->
         <div id="page-home" class="page active-page">
             <div class="stats-grid">
                 <div class="stat-card"><div class="stat-number">5+</div><div>Skill TJKT</div></div>
@@ -518,6 +504,7 @@
                 <p style="line-height: 1.8;">Halo! Saya Abdul Basit Al Fakih, siswa TJKT SMK Wikrama Bogor. Saya memiliki passion di bidang networking, server administration, cybersecurity, dan web development. Siap memberikan kontribusi terbaik untuk PKL dan industri!</p>
                 <div style="margin-top: 1.5rem;">
                     <button class="btn-primary" onclick="showPage('skill')"><i class="fas fa-arrow-right"></i> Lihat Skill Saya</button>
+                    <button class="btn-outline" onclick="showPage('cv')" style="margin-left: 1rem;"><i class="fas fa-file-alt"></i> Lihat CV Saya</button>
                 </div>
             </div>
         </div>
@@ -573,7 +560,7 @@
             </div>
         </div>
 
-        <!-- SERTIFIKAT - UPLOAD PDF -->
+        <!-- SERTIFIKAT UPLOAD PDF -->
         <div id="page-sertifikat" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="cert-grid">
@@ -598,7 +585,7 @@
             <input type="file" id="certFileInput" accept=".pdf,image/*" style="display:none;">
         </div>
 
-        <!-- GALERI -->
+        <!-- GALERI UPLOAD -->
         <div id="page-galeri" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="galeri-grid" id="galeriGrid">
@@ -612,46 +599,30 @@
             <input type="file" id="galeriFileInput" accept="image/*" style="display:none;">
         </div>
 
-        <!-- CV HALAMAN -->
+        <!-- CV UPLOAD PAGE - KHUSUS BUAT UPLOAD CV DARI CANVA -->
         <div id="page-cv" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="white-card">
-                <div class="cv-header">
-                    <img class="cv-photo-small" id="cvPhoto" src="https://via.placeholder.com/120x120?text=Foto">
-                    <h1>ABDUL BASIT AL FAKIH</h1>
-                    <p style="color:#1e6f5c; font-weight:600;">Network Engineer | Server Administrator | Cybersecurity Enthusiast</p>
+                <h2 style="margin-bottom: 1rem;"><i class="fas fa-file-pdf" style="color:#e74c3c;"></i> Curriculum Vitae (CV) Saya</h2>
+                <p style="margin-bottom: 1.5rem; color:#475569;">Klik area di bawah untuk upload CV dari Canva (format PDF). CV akan langsung tampil dan bisa di-download oleh siapa saja.</p>
+                
+                <div class="cv-upload-area" onclick="document.getElementById('cvFileInput').click()">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3 style="margin-bottom: 0.5rem;">Klik untuk Upload CV (PDF)</h3>
+                    <p style="font-size: 0.8rem; color:#64748b;">Support file PDF dari Canva</p>
                 </div>
-                <div class="cv-section">
-                    <div class="cv-left">
-                        <div class="cv-section-title">📞 Kontak</div>
-                        <div class="cv-item">📧 abdulbasitalfakih@smkwikrama.sch.id</div>
-                        <div class="cv-item">📱 085771082319</div>
-                        <div class="cv-item">📍 Bogor, Jawa Barat</div>
-                        <div class="cv-section-title">🎓 Pendidikan</div>
-                        <div class="cv-item"><strong>SMK Wikrama Bogor</strong> (2024 - Sekarang)<br>Jurusan TJKT</div>
-                        <div class="cv-section-title">📜 Sertifikat</div>
-                        <div class="cv-item">✅ Cybersecurity Essentials - Cisco/Digitalent</div>
-                        <div class="cv-item">✅ MikroTik MTCNA</div>
-                        <div class="cv-item">✅ Debian Server Administration</div>
-                        <div class="cv-item">✅ WordPress Expert - BNSP</div>
-                    </div>
-                    <div class="cv-right">
-                        <div class="cv-section-title">💻 Skill</div>
-                        <div class="cv-item">• MikroTik RouterOS</div>
-                        <div class="cv-item">• Debian Server (LAMP, DNS, DHCP)</div>
-                        <div class="cv-item">• Cybersecurity (Nmap, Firewall)</div>
-                        <div class="cv-item">• WordPress & Elementor</div>
-                        <div class="cv-item">• Web Development (HTML, CSS, PHP)</div>
-                        <div class="cv-section-title">🚀 Proyek</div>
-                        <div class="cv-item">• Simulasi Jaringan Kantor</div>
-                        <div class="cv-item">• Debian Server LAMP + DNS</div>
-                        <div class="cv-item">• Vulnerability Assessment Lab</div>
-                        <div class="cv-item">• Website Profil WordPress</div>
+                <input type="file" id="cvFileInput" accept=".pdf" style="display: none;" onchange="uploadCV(this)">
+                
+                <div id="cvPreviewArea" class="cv-preview" style="display: none;">
+                    <iframe id="cvIframe" src=""></iframe>
+                    <div>
+                        <a id="downloadCvLink" class="btn-primary download-cv-btn" download><i class="fas fa-download"></i> Download CV (PDF)</a>
                     </div>
                 </div>
-                <div style="text-align:center; margin-top:2rem;">
-                    <button class="btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Cetak / Save PDF</button>
-                </div>
+                
+                <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color:#94a3b8;">
+                    <i class="fas fa-info-circle"></i> Tips: Buat CV di Canva → Download sebagai PDF → Upload di sini
+                </p>
             </div>
         </div>
 
@@ -681,12 +652,13 @@
     </div>
 
     <div class="footer">
-        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT
+        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT · Networking · Server · Cybersecurity · Web Development
     </div>
 </div>
 
 <script>
     let currentCertId = null;
+    let currentCvFile = null;
 
     function showPage(pageId) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
@@ -702,14 +674,12 @@
             const reader = new FileReader();
             reader.onload = function(e) {
                 document.getElementById('profilePhoto').src = e.target.result;
-                const cvPhoto = document.getElementById('cvPhoto');
-                if (cvPhoto) cvPhoto.src = e.target.result;
             };
             reader.readAsDataURL(input.files[0]);
         }
     }
 
-    // UPLOAD SERTIFIKAT (PDF atau GAMBAR)
+    // UPLOAD SERTIFIKAT (PDF/GAMBAR)
     function uploadCertFile(element, certId) {
         currentCertId = certId;
         document.getElementById('certFileInput').onchange = function(e) {
@@ -720,21 +690,19 @@
                 const previewDiv = document.getElementById(certId + 'Preview');
                 
                 if (fileType === 'application/pdf') {
-                    // Untuk PDF, tampilkan icon PDF + nama file
                     const fileURL = URL.createObjectURL(file);
                     previewDiv.innerHTML = `<i class="fas fa-file-pdf" style="font-size:2.5rem; color:#e74c3c;"></i>
-                        <div class="file-name" style="font-size:0.7rem; margin-top:0.5rem;">📄 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>
+                        <div class="file-name">📄 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>
                         <a href="${fileURL}" target="_blank" style="font-size:0.7rem; color:#1e6f5c; margin-top:0.3rem;" onclick="event.stopPropagation()">📎 Buka PDF</a>`;
                 } else if (fileType.startsWith('image/')) {
                     const reader = new FileReader();
                     reader.onload = function(ev) {
-                        previewDiv.innerHTML = `<img src="${ev.target.result}" alt="Sertifikat" style="max-width:100%; max-height:100px; border-radius:8px;">
-                            <div class="file-name" style="font-size:0.7rem; margin-top:0.3rem;">📷 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>`;
+                        previewDiv.innerHTML = `<img src="${ev.target.result}" alt="Sertifikat" style="max-width:100%; max-height:100px;">
+                            <div class="file-name">📷 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>`;
                     };
                     reader.readAsDataURL(file);
                 } else {
-                    previewDiv.innerHTML = `<i class="fas fa-file-alt" style="font-size:2.5rem; color:#1e6f5c;"></i>
-                        <div class="file-name" style="font-size:0.7rem; margin-top:0.5rem;">📄 ${fileName}</div>`;
+                    previewDiv.innerHTML = `<i class="fas fa-file-alt"></i><div class="file-name">${fileName}</div>`;
                 }
             }
             document.getElementById('certFileInput').value = '';
@@ -752,7 +720,7 @@
                 reader.onload = function(ev) {
                     const galeriItems = document.querySelectorAll('#galeriGrid .galeri-item');
                     if (galeriItems[galeriIndex]) {
-                        galeriItems[galeriIndex].innerHTML = `<img src="${ev.target.result}" alt="Kegiatan"><p style="margin-top:0.5rem;">Klik ganti</p>`;
+                        galeriItems[galeriIndex].innerHTML = `<img src="${ev.target.result}" alt="Kegiatan"><p>Klik ganti</p>`;
                     }
                 };
                 reader.readAsDataURL(e.target.files[0]);
@@ -760,6 +728,28 @@
             document.getElementById('galeriFileInput').value = '';
         };
         document.getElementById('galeriFileInput').click();
+    }
+
+    // UPLOAD CV PDF DARI CANVA
+    function uploadCV(input) {
+        if (input.files && input.files[0]) {
+            const file = input.files[0];
+            if (file.type === 'application/pdf') {
+                currentCvFile = file;
+                const fileURL = URL.createObjectURL(file);
+                
+                document.getElementById('cvIframe').src = fileURL;
+                document.getElementById('downloadCvLink').href = fileURL;
+                document.getElementById('cvPreviewArea').style.display = 'block';
+                
+                // Scroll ke preview
+                setTimeout(() => {
+                    document.getElementById('cvPreviewArea').scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            } else {
+                alert('❌ Hanya file PDF yang bisa diupload! Silakan export CV dari Canva ke format PDF.');
+            }
+        }
     }
 
     function copyToClipboard(text) {
