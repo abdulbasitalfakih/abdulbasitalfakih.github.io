@@ -47,6 +47,12 @@
             gap: 12px;
         }
 
+        /* LOGO BULAT DENGAN FITUR UPLOAD */
+        .logo-wrapper {
+            position: relative;
+            cursor: pointer;
+        }
+
         .logo-bulat-wikrama {
             width: 42px;
             height: 42px;
@@ -55,13 +61,42 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .logo-bulat-wikrama img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .logo-bulat-wikrama span {
             color: white;
             font-size: 13px;
             font-weight: 800;
+        }
+
+        .logo-plus-overlay {
+            position: absolute;
+            bottom: -5px;
+            right: -8px;
+            background: #1e6f5c;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: white;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .logo-wrapper:hover .logo-plus-overlay {
+            transform: scale(1.1);
+            background: #e74c3c;
         }
 
         .logo-name {
@@ -391,7 +426,7 @@
         }
         .galeri-item i { font-size: 2rem; color: #1e6f5c; }
 
-        /* CV UPLOAD PAGE - KHUSUS */
+        /* CV UPLOAD */
         .cv-upload-area {
             border: 2px dashed #cbd5e1;
             border-radius: 24px;
@@ -406,22 +441,14 @@
             background: #e6f4f1;
         }
         .cv-upload-area i { font-size: 3rem; color: #1e6f5c; margin-bottom: 1rem; }
-        .cv-preview {
-            margin-top: 2rem;
-            text-align: center;
-        }
+        .cv-preview { margin-top: 2rem; text-align: center; }
         .cv-preview iframe {
             width: 100%;
             height: 500px;
             border-radius: 20px;
             border: 1px solid #e2e8f0;
         }
-        .download-cv-btn {
-            margin-top: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .download-cv-btn { margin-top: 1rem; display: inline-flex; align-items: center; gap: 8px; }
 
         .footer {
             background: #f8fafc;
@@ -445,9 +472,14 @@
     <!-- NAVBAR -->
     <div class="nav-premium">
         <div class="logo-area">
-            <div class="logo-bulat-wikrama" onclick="alert('🏫 SMK Wikrama Bogor\n\nJl. Raya Wangun No.21, Bogor')">
-                <span>W</span>
+            <!-- LOGO DENGAN FITUR PLUS - BISA UPLOAD SENDIRI -->
+            <div class="logo-wrapper" onclick="document.getElementById('logoInput').click()">
+                <div class="logo-bulat-wikrama" id="logoContainer">
+                    <span id="logoText">W</span>
+                </div>
+                <div class="logo-plus-overlay"><i class="fas fa-plus"></i></div>
             </div>
+            <input type="file" id="logoInput" accept="image/*" style="display: none;" onchange="uploadLogo(this)">
             <div class="logo-name">ABDUL BASIT · TJKT</div>
         </div>
         <div class="nav-links">
@@ -599,30 +631,22 @@
             <input type="file" id="galeriFileInput" accept="image/*" style="display:none;">
         </div>
 
-        <!-- CV UPLOAD PAGE - KHUSUS BUAT UPLOAD CV DARI CANVA -->
+        <!-- CV UPLOAD -->
         <div id="page-cv" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="white-card">
                 <h2 style="margin-bottom: 1rem;"><i class="fas fa-file-pdf" style="color:#e74c3c;"></i> Curriculum Vitae (CV) Saya</h2>
-                <p style="margin-bottom: 1.5rem; color:#475569;">Klik area di bawah untuk upload CV dari Canva (format PDF). CV akan langsung tampil dan bisa di-download oleh siapa saja.</p>
-                
+                <p style="margin-bottom: 1.5rem; color:#475569;">Klik area di bawah untuk upload CV dari Canva (format PDF). CV akan langsung tampil dan bisa di-download.</p>
                 <div class="cv-upload-area" onclick="document.getElementById('cvFileInput').click()">
                     <i class="fas fa-cloud-upload-alt"></i>
-                    <h3 style="margin-bottom: 0.5rem;">Klik untuk Upload CV (PDF)</h3>
-                    <p style="font-size: 0.8rem; color:#64748b;">Support file PDF dari Canva</p>
+                    <h3>Klik untuk Upload CV (PDF)</h3>
+                    <p style="font-size: 0.8rem;">Support file PDF dari Canva</p>
                 </div>
                 <input type="file" id="cvFileInput" accept=".pdf" style="display: none;" onchange="uploadCV(this)">
-                
                 <div id="cvPreviewArea" class="cv-preview" style="display: none;">
                     <iframe id="cvIframe" src=""></iframe>
-                    <div>
-                        <a id="downloadCvLink" class="btn-primary download-cv-btn" download><i class="fas fa-download"></i> Download CV (PDF)</a>
-                    </div>
+                    <div><a id="downloadCvLink" class="btn-primary download-cv-btn" download><i class="fas fa-download"></i> Download CV (PDF)</a></div>
                 </div>
-                
-                <p style="margin-top: 1rem; font-size: 0.7rem; text-align: center; color:#94a3b8;">
-                    <i class="fas fa-info-circle"></i> Tips: Buat CV di Canva → Download sebagai PDF → Upload di sini
-                </p>
             </div>
         </div>
 
@@ -657,9 +681,6 @@
 </div>
 
 <script>
-    let currentCertId = null;
-    let currentCvFile = null;
-
     function showPage(pageId) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
         document.getElementById('page-' + pageId).classList.add('active-page');
@@ -667,6 +688,18 @@
     }
 
     function showDetail(skillId) { showPage(skillId); }
+
+    // UPLOAD LOGO SMK WIKRAMA
+    function uploadLogo(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const logoContainer = document.getElementById('logoContainer');
+                logoContainer.innerHTML = `<img src="${e.target.result}" alt="Logo SMK Wikrama" style="width:100%; height:100%; object-fit:cover;">`;
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
     // UPLOAD FOTO PROFIL
     function uploadPhoto(input) {
@@ -679,9 +712,8 @@
         }
     }
 
-    // UPLOAD SERTIFIKAT (PDF/GAMBAR)
+    // UPLOAD SERTIFIKAT
     function uploadCertFile(element, certId) {
-        currentCertId = certId;
         document.getElementById('certFileInput').onchange = function(e) {
             if (e.target.files && e.target.files[0]) {
                 const file = e.target.files[0];
@@ -693,16 +725,13 @@
                     const fileURL = URL.createObjectURL(file);
                     previewDiv.innerHTML = `<i class="fas fa-file-pdf" style="font-size:2.5rem; color:#e74c3c;"></i>
                         <div class="file-name">📄 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>
-                        <a href="${fileURL}" target="_blank" style="font-size:0.7rem; color:#1e6f5c; margin-top:0.3rem;" onclick="event.stopPropagation()">📎 Buka PDF</a>`;
+                        <a href="${fileURL}" target="_blank" style="font-size:0.7rem; color:#1e6f5c;" onclick="event.stopPropagation()">📎 Buka PDF</a>`;
                 } else if (fileType.startsWith('image/')) {
                     const reader = new FileReader();
                     reader.onload = function(ev) {
-                        previewDiv.innerHTML = `<img src="${ev.target.result}" alt="Sertifikat" style="max-width:100%; max-height:100px;">
-                            <div class="file-name">📷 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>`;
+                        previewDiv.innerHTML = `<img src="${ev.target.result}" style="max-width:100%; max-height:100px;"><div class="file-name">📷 ${fileName}</div>`;
                     };
                     reader.readAsDataURL(file);
-                } else {
-                    previewDiv.innerHTML = `<i class="fas fa-file-alt"></i><div class="file-name">${fileName}</div>`;
                 }
             }
             document.getElementById('certFileInput').value = '';
@@ -718,9 +747,9 @@
             if (e.target.files && e.target.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function(ev) {
-                    const galeriItems = document.querySelectorAll('#galeriGrid .galeri-item');
-                    if (galeriItems[galeriIndex]) {
-                        galeriItems[galeriIndex].innerHTML = `<img src="${ev.target.result}" alt="Kegiatan"><p>Klik ganti</p>`;
+                    const items = document.querySelectorAll('#galeriGrid .galeri-item');
+                    if (items[galeriIndex]) {
+                        items[galeriIndex].innerHTML = `<img src="${ev.target.result}" alt="Kegiatan"><p>Klik ganti</p>`;
                     }
                 };
                 reader.readAsDataURL(e.target.files[0]);
@@ -730,24 +759,18 @@
         document.getElementById('galeriFileInput').click();
     }
 
-    // UPLOAD CV PDF DARI CANVA
+    // UPLOAD CV
     function uploadCV(input) {
         if (input.files && input.files[0]) {
             const file = input.files[0];
             if (file.type === 'application/pdf') {
-                currentCvFile = file;
                 const fileURL = URL.createObjectURL(file);
-                
                 document.getElementById('cvIframe').src = fileURL;
                 document.getElementById('downloadCvLink').href = fileURL;
                 document.getElementById('cvPreviewArea').style.display = 'block';
-                
-                // Scroll ke preview
-                setTimeout(() => {
-                    document.getElementById('cvPreviewArea').scrollIntoView({ behavior: 'smooth' });
-                }, 100);
+                setTimeout(() => document.getElementById('cvPreviewArea').scrollIntoView({ behavior: 'smooth' }), 100);
             } else {
-                alert('❌ Hanya file PDF yang bisa diupload! Silakan export CV dari Canva ke format PDF.');
+                alert('❌ Hanya file PDF yang bisa diupload!');
             }
         }
     }
