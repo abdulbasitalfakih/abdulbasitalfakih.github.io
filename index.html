@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Abdul Basit Al Fakih | Ultimate Portfolio · SMK Wikrama Bogor</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -30,7 +30,7 @@
         /* NAVBAR */
         .nav-premium {
             background: #ffffff;
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,29 +39,29 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            gap: 0.5rem;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
-        /* LOGO BULAT DENGAN FITUR UPLOAD */
         .logo-wrapper {
             position: relative;
             cursor: pointer;
         }
 
         .logo-bulat-wikrama {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(145deg, #1a6d5e, #0f5548);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
             overflow: hidden;
         }
 
@@ -73,7 +73,7 @@
 
         .logo-bulat-wikrama span {
             color: white;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 800;
         }
 
@@ -83,24 +83,18 @@
             right: -8px;
             background: #1e6f5c;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 10px;
+            font-size: 8px;
             color: white;
             border: 2px solid white;
-            transition: all 0.3s ease;
-        }
-
-        .logo-wrapper:hover .logo-plus-overlay {
-            transform: scale(1.1);
-            background: #e74c3c;
         }
 
         .logo-name {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 800;
             background: linear-gradient(135deg, #0f2b3d, #1e6f5c);
             -webkit-background-clip: text;
@@ -110,18 +104,17 @@
 
         .nav-links {
             display: flex;
-            gap: 0.3rem;
+            gap: 0.2rem;
             flex-wrap: wrap;
         }
 
         .nav-links a {
             color: #334155;
             text-decoration: none;
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             border-radius: 40px;
-            transition: all 0.3s ease;
             cursor: pointer;
         }
 
@@ -131,127 +124,121 @@
         }
 
         /* PAGE */
-        .page-container { padding: 2rem; min-height: 70vh; }
-        .page { display: none; animation: fadeInUp 0.4s ease; }
+        .page-container { padding: 1rem; min-height: 70vh; }
+        .page { display: none; animation: fadeInUp 0.3s ease; }
         .page.active-page { display: block; }
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         /* CARD */
         .white-card {
             background: #ffffff;
-            border-radius: 28px;
+            border-radius: 24px;
             border: 1px solid #e2e8f0;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-        .white-card:hover {
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-            border-color: #1e6f5c;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        /* HERO */
+        /* HERO - MOBILE FIRST */
         .hero-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 3rem;
-            padding: 2rem;
+            text-align: center;
+            padding: 1.2rem;
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-            border-radius: 32px;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+            border-radius: 24px;
+            margin-bottom: 1rem;
             border: 1px solid #e2e8f0;
         }
-
-        .hero-left { flex: 0.8; text-align: center; }
-        .hero-right { flex: 2; }
 
         .photo-upload-area {
             position: relative;
             cursor: pointer;
             display: inline-block;
+            margin-bottom: 1rem;
         }
 
         .big-photo {
-            width: 100%;
-            max-width: 220px;
-            height: 220px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #1e6f5c;
+            border: 3px solid #1e6f5c;
             background: #f1f5f9;
         }
 
         .photo-overlay {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 5px;
+            right: 5px;
             background: #1e6f5c;
             border-radius: 50%;
-            width: 38px;
-            height: 38px;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: white;
             border: 2px solid white;
         }
 
-        .hero-right h1 { font-size: 2.5rem; font-weight: 800; color: #0f2b3d; }
-        .hero-right h1 span { color: #1e6f5c; border-bottom: 3px solid #1e6f5c; }
+        .hero-right h1 { font-size: 1.6rem; font-weight: 800; color: #0f2b3d; }
+        .hero-right h1 span { color: #1e6f5c; }
 
         .greeting-badge {
             display: inline-block;
             background: linear-gradient(135deg, #1e6f5c, #0f5548);
             color: white;
-            padding: 0.3rem 1.2rem;
+            padding: 0.2rem 1rem;
             border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-size: 0.6rem;
+            margin-bottom: 0.5rem;
         }
 
         .title-badges {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 1rem 0;
+            gap: 6px;
+            justify-content: center;
+            margin: 0.8rem 0;
         }
         .title-badge {
             background: #e6f4f1;
-            padding: 0.3rem 1rem;
+            padding: 0.2rem 0.7rem;
             border-radius: 40px;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: #1e6f5c;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin: 1.5rem 0;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1rem 0;
         }
         .contact-chip {
             background: #f1f5f9;
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 40px;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
             cursor: pointer;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #1e6f5c, #0f5548);
-            padding: 0.7rem 1.8rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 40px;
             color: white;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             border: none;
             cursor: pointer;
         }
@@ -259,210 +246,192 @@
         .btn-outline {
             background: white;
             border: 1.5px solid #1e6f5c;
-            padding: 0.7rem 1.8rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 40px;
             color: #1e6f5c;
             font-weight: 600;
+            font-size: 0.7rem;
             cursor: pointer;
         }
 
         .back-button {
             background: #f1f5f9;
             border: none;
-            padding: 0.5rem 1.5rem;
+            padding: 0.4rem 1rem;
             border-radius: 40px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             cursor: pointer;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             color: #1e6f5c;
         }
 
         /* STATS */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
         }
         .stat-card {
             background: #f8fafc;
-            border-radius: 24px;
-            padding: 1.2rem;
+            border-radius: 20px;
+            padding: 0.8rem;
             text-align: center;
             border: 1px solid #e2e8f0;
         }
-        .stat-number { font-size: 1.8rem; font-weight: 800; color: #1e6f5c; }
+        .stat-number { font-size: 1.3rem; font-weight: 800; color: #1e6f5c; }
+        .stat-card div:last-child { font-size: 0.7rem; }
 
         /* SKILL */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.2rem;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
         }
         .skill-card {
             background: #f8fafc;
-            border-radius: 24px;
-            padding: 1.2rem;
+            border-radius: 20px;
+            padding: 0.8rem;
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             border: 1px solid #e2e8f0;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #1e6f5c;
         }
         .skill-icon-large {
-            font-size: 1.8rem;
-            width: 50px;
-            height: 50px;
+            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
             background: #e6f4f1;
-            border-radius: 18px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        .skill-content h4 { font-size: 0.9rem; }
+        .skill-content p { font-size: 0.65rem; color: #475569; }
 
         /* PROYEK */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
         .project-card {
             background: #f8fafc;
-            border-radius: 24px;
+            border-radius: 20px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
             cursor: pointer;
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #1e6f5c;
-        }
         .project-img {
-            width: 100%;
-            height: 150px;
+            height: 100px;
             background: linear-gradient(135deg, #e6f4f1, #d0eae4);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: #1e6f5c;
+            font-size: 2rem;
         }
+        .project-card h4 { padding: 0.6rem 0.8rem 0.2rem; font-size: 0.9rem; }
+        .project-card p { padding: 0 0.8rem 0.8rem; font-size: 0.7rem; }
 
-        /* SERTIFIKAT UPLOAD PDF */
+        /* SERTIFIKAT */
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
         .cert-card {
             background: #f8fafc;
-            border-radius: 24px;
+            border-radius: 20px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .cert-card:hover {
-            transform: translateY(-5px);
-            border-color: #1e6f5c;
         }
         .cert-preview {
             background: linear-gradient(135deg, #e6f4f1, #d0eae4);
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
-            min-height: 140px;
+            min-height: 100px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
-        .cert-preview i { font-size: 2.5rem; color: #1e6f5c; }
-        .cert-preview .file-name {
-            font-size: 0.7rem;
-            color: #1e6f5c;
-            margin-top: 0.5rem;
-            word-break: break-all;
-            text-align: center;
-        }
-        .cert-info { padding: 1rem; text-align: center; }
-        .cert-name { font-weight: 700; font-size: 0.8rem; color: #0f2b3d; }
+        .cert-preview i { font-size: 2rem; }
+        .cert-preview img { max-width: 100%; max-height: 80px; object-fit: contain; }
+        .cert-preview .file-name { font-size: 0.6rem; margin-top: 0.3rem; }
+        .cert-info { padding: 0.7rem; text-align: center; }
+        .cert-name { font-weight: 700; font-size: 0.75rem; }
 
         /* GALERI */
         .galeri-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
         }
         .galeri-item {
             background: #f8fafc;
-            border-radius: 20px;
-            padding: 1rem;
+            border-radius: 16px;
+            padding: 0.8rem;
             text-align: center;
             cursor: pointer;
-            min-height: 160px;
+            min-height: 120px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border: 1px solid #e2e8f0;
         }
-        .galeri-item:hover {
-            transform: translateY(-5px);
-            border-color: #1e6f5c;
-        }
         .galeri-item img {
             max-width: 100%;
-            max-height: 100px;
+            max-height: 80px;
             object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 0.5rem;
+            border-radius: 10px;
         }
-        .galeri-item i { font-size: 2rem; color: #1e6f5c; }
+        .galeri-item i { font-size: 1.8rem; color: #1e6f5c; }
 
-        /* CV UPLOAD */
+        /* CV */
         .cv-upload-area {
             border: 2px dashed #cbd5e1;
-            border-radius: 24px;
-            padding: 2rem;
+            border-radius: 20px;
+            padding: 1rem;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s ease;
             background: #f8fafc;
         }
-        .cv-upload-area:hover {
-            border-color: #1e6f5c;
-            background: #e6f4f1;
-        }
-        .cv-upload-area i { font-size: 3rem; color: #1e6f5c; margin-bottom: 1rem; }
-        .cv-preview { margin-top: 2rem; text-align: center; }
+        .cv-upload-area i { font-size: 2rem; }
         .cv-preview iframe {
             width: 100%;
-            height: 500px;
-            border-radius: 20px;
+            height: 350px;
+            border-radius: 16px;
             border: 1px solid #e2e8f0;
         }
-        .download-cv-btn { margin-top: 1rem; display: inline-flex; align-items: center; gap: 8px; }
 
         .footer {
             background: #f8fafc;
             text-align: center;
-            padding: 1.5rem;
-            font-size: 0.7rem;
+            padding: 1rem;
+            font-size: 0.6rem;
             color: #64748b;
             border-top: 1px solid #e2e8f0;
         }
 
-        @media (max-width: 800px) {
-            .page-container { padding: 1rem; }
-            .hero-section { flex-direction: column; text-align: center; }
-            .cv-preview iframe { height: 400px; }
+        @media (min-width: 768px) {
+            .nav-premium { padding: 0.8rem 2rem; }
+            .page-container { padding: 2rem; }
+            .hero-section { flex-direction: row; text-align: left; gap: 2rem; }
+            .hero-left { flex: 0.6; }
+            .hero-right { flex: 2; text-align: left; }
+            .title-badges { justify-content: flex-start; }
+            .contact-info { justify-content: flex-start; }
+            .stats-grid { grid-template-columns: repeat(4, 1fr); }
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+            .cert-grid { grid-template-columns: repeat(2, 1fr); }
+            .galeri-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -472,50 +441,49 @@
     <!-- NAVBAR -->
     <div class="nav-premium">
         <div class="logo-area">
-            <!-- LOGO DENGAN FITUR PLUS - BISA UPLOAD SENDIRI -->
-            <div class="logo-wrapper" onclick="document.getElementById('logoInput').click()">
+            <div class="logo-wrapper" onclick="uploadLogoViaClick()">
                 <div class="logo-bulat-wikrama" id="logoContainer">
                     <span id="logoText">W</span>
                 </div>
                 <div class="logo-plus-overlay"><i class="fas fa-plus"></i></div>
             </div>
-            <input type="file" id="logoInput" accept="image/*" style="display: none;" onchange="uploadLogo(this)">
+            <input type="file" id="logoInput" accept="image/*" style="display: none;">
             <div class="logo-name">ABDUL BASIT · TJKT</div>
         </div>
         <div class="nav-links">
-            <a onclick="showPage('home')"><i class="fas fa-home"></i> Beranda</a>
-            <a onclick="showPage('tentang')"><i class="fas fa-user"></i> Tentang</a>
-            <a onclick="showPage('skill')"><i class="fas fa-microchip"></i> Skill</a>
-            <a onclick="showPage('proyek')"><i class="fas fa-rocket"></i> Proyek</a>
-            <a onclick="showPage('sertifikat')"><i class="fas fa-award"></i> Sertifikat</a>
-            <a onclick="showPage('galeri')"><i class="fas fa-images"></i> Galeri</a>
-            <a onclick="showPage('cv')"><i class="fas fa-file-alt"></i> CV Saya</a>
-            <a onclick="showPage('kontak')"><i class="fas fa-envelope"></i> Kontak</a>
+            <a onclick="showPage('home')">🏠 Home</a>
+            <a onclick="showPage('tentang')">👤 Tentang</a>
+            <a onclick="showPage('skill')">⚡ Skill</a>
+            <a onclick="showPage('proyek')">🚀 Proyek</a>
+            <a onclick="showPage('sertifikat')">📜 Sertifikat</a>
+            <a onclick="showPage('galeri')">📷 Galeri</a>
+            <a onclick="showPage('cv')">📄 CV</a>
+            <a onclick="showPage('kontak')">📞 Kontak</a>
         </div>
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <div class="hero-section">
         <div class="hero-left">
-            <div class="photo-upload-area" onclick="document.getElementById('photoInput').click()">
-                <img class="big-photo" id="profilePhoto" src="https://via.placeholder.com/220x220?text=Klik+%2B+Upload+Foto" alt="Foto Profil">
+            <div class="photo-upload-area" onclick="uploadPhotoViaClick()">
+                <img class="big-photo" id="profilePhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130' viewBox='0 0 130 130'%3E%3Crect width='130' height='130' fill='%23f1f5f9'/%3E%3Ctext x='65' y='65' text-anchor='middle' dy='.3em' fill='%2394a3b8' font-size='12'%3EKlik +%3C/text%3E%3C/svg%3E" alt="Foto Profil">
                 <div class="photo-overlay"><i class="fas fa-plus"></i></div>
             </div>
-            <input type="file" id="photoInput" accept="image/*" style="display: none;" onchange="uploadPhoto(this)">
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
         </div>
         <div class="hero-right">
             <div class="greeting-badge"><i class="fas fa-bolt"></i> READY FOR PKL 2026</div>
             <h1>Abdul Basit <span>Al Fakih</span></h1>
             <div class="title-badges">
-                <span class="title-badge"><i class="fas fa-network-wired"></i> Network Engineer</span>
-                <span class="title-badge"><i class="fas fa-server"></i> Server Admin</span>
-                <span class="title-badge"><i class="fas fa-shield-haltered"></i> Cybersecurity</span>
-                <span class="title-badge"><i class="fas fa-code"></i> Web Developer</span>
+                <span class="title-badge">Network Engineer</span>
+                <span class="title-badge">Server Admin</span>
+                <span class="title-badge">Cybersecurity</span>
+                <span class="title-badge">Web Developer</span>
             </div>
             <div class="contact-info">
-                <div class="contact-chip" onclick="copyToClipboard('abdulbasitalfakih@smkwikrama.sch.id')"><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
-                <div class="contact-chip" onclick="copyToClipboard('085771082319')"><i class="fab fa-whatsapp"></i> 085771082319</div>
-                <div class="contact-chip" onclick="alert('SMK Wikrama Bogor\nJurusan TJKT')"><i class="fas fa-school"></i> SMK Wikrama Bogor</div>
+                <div class="contact-chip" onclick="copyToClipboard('abdulbasitalfakih@smkwikrama.sch.id')"><i class="fas fa-envelope"></i> Email</div>
+                <div class="contact-chip" onclick="copyToClipboard('085771082319')"><i class="fab fa-whatsapp"></i> WA</div>
+                <div class="contact-chip" onclick="alert('SMK Wikrama Bogor')"><i class="fas fa-school"></i> Wikrama</div>
             </div>
         </div>
     </div>
@@ -532,11 +500,10 @@
                 <div class="stat-card"><div class="stat-number">2026</div><div>Siap PKL</div></div>
             </div>
             <div class="white-card">
-                <h2 style="margin-bottom: 1rem;"><i class="fas fa-quote-left" style="color:#1e6f5c;"></i> Selamat Datang di Portofolio Saya</h2>
-                <p style="line-height: 1.8;">Halo! Saya Abdul Basit Al Fakih, siswa TJKT SMK Wikrama Bogor. Saya memiliki passion di bidang networking, server administration, cybersecurity, dan web development. Siap memberikan kontribusi terbaik untuk PKL dan industri!</p>
-                <div style="margin-top: 1.5rem;">
-                    <button class="btn-primary" onclick="showPage('skill')"><i class="fas fa-arrow-right"></i> Lihat Skill Saya</button>
-                    <button class="btn-outline" onclick="showPage('cv')" style="margin-left: 1rem;"><i class="fas fa-file-alt"></i> Lihat CV Saya</button>
+                <h2 style="margin-bottom: 0.8rem; font-size: 1.2rem;"><i class="fas fa-quote-left" style="color:#1e6f5c;"></i> Selamat Datang</h2>
+                <p style="font-size: 0.8rem; line-height: 1.6;">Halo! Saya Abdul Basit Al Fakih, siswa TJKT SMK Wikrama Bogor. Saya memiliki passion di bidang networking, server administration, cybersecurity, dan web development.</p>
+                <div style="margin-top: 1rem;">
+                    <button class="btn-primary" onclick="showPage('skill')"><i class="fas fa-arrow-right"></i> Lihat Skill</button>
                 </div>
             </div>
         </div>
@@ -545,24 +512,15 @@
         <div id="page-tentang" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="white-card">
-                <h2><i class="fas fa-user-astronaut" style="color:#1e6f5c;"></i> Tentang Saya</h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1rem;">
-                    <div style="flex:1;">
-                        <h3 style="color:#1e6f5c;">📋 Biodata</h3>
-                        <ul style="list-style:none;">
-                            <li>📛 <strong>Nama</strong> : Abdul Basit Al Fakih</li>
-                            <li>🏫 <strong>Sekolah</strong> : SMK Wikrama Bogor</li>
-                            <li>📚 <strong>Jurusan</strong> : TJKT</li>
-                            <li>📍 <strong>Domisili</strong> : Bogor, Jawa Barat</li>
-                            <li>💪 <strong>Status</strong> : Siap PKL 2026</li>
-                        </ul>
-                    </div>
-                    <div style="flex:1;">
-                        <h3 style="color:#1e6f5c;">🎯 Visi Misi</h3>
-                        <p>Menjadi tenaga profesional di bidang IT yang mampu memberikan solusi teknologi.</p>
-                        <h3 style="margin-top:1rem;">💡 Motto</h3>
-                        <p><i>"Belajar, berkarya, dan berbagi — kunci sukses di era digital."</i></p>
-                    </div>
+                <h2 style="font-size: 1.1rem;"><i class="fas fa-user-astronaut" style="color:#1e6f5c;"></i> Tentang Saya</h2>
+                <div style="margin-top: 0.8rem;">
+                    <p><strong>📛 Nama</strong> : Abdul Basit Al Fakih</p>
+                    <p><strong>🏫 Sekolah</strong> : SMK Wikrama Bogor</p>
+                    <p><strong>📚 Jurusan</strong> : TJKT</p>
+                    <p><strong>📍 Domisili</strong> : Bogor, Jawa Barat</p>
+                    <p><strong>💪 Status</strong> : Siap PKL 2026</p>
+                    <hr style="margin: 0.8rem 0;">
+                    <p><strong>💡 Motto</strong> : "Belajar, berkarya, dan berbagi — kunci sukses di era digital."</p>
                 </div>
             </div>
         </div>
@@ -583,51 +541,30 @@
         <div id="page-proyek" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="project-grid">
-                <div class="project-card" onclick="alert('Proyek: Simulasi Jaringan Kantor MikroTik')"><div class="project-img"><i class="fas fa-network-wired"></i></div><h4 style="padding:1rem 1rem 0.3rem;">Simulasi Jaringan Kantor</h4><p style="padding:0 1rem 1rem;">VLAN, routing, firewall di MikroTik</p></div>
-                <div class="project-card" onclick="alert('Proyek: Debian Server LAMP + DNS')"><div class="project-img"><i class="fab fa-linux"></i></div><h4 style="padding:1rem 1rem 0.3rem;">Debian Server LAMP</h4><p style="padding:0 1rem 1rem;">Web server & DNS server</p></div>
-                <div class="project-card" onclick="alert('Proyek: Vulnerability Assessment')"><div class="project-img"><i class="fas fa-shield-haltered"></i></div><h4 style="padding:1rem 1rem 0.3rem;">Vulnerability Assessment</h4><p style="padding:0 1rem 1rem;">Scanning Nmap & hardening</p></div>
-                <div class="project-card" onclick="alert('Proyek: Website WordPress')"><div class="project-img"><i class="fab fa-wordpress"></i></div><h4 style="padding:1rem 1rem 0.3rem;">Website WordPress</h4><p style="padding:0 1rem 1rem;">Profil sekolah + Elementor</p></div>
-                <div class="project-card" onclick="alert('Proyek: Portofolio Web CEO')"><div class="project-img"><i class="fas fa-code"></i></div><h4 style="padding:1rem 1rem 0.3rem;">Portofolio Web CEO</h4><p style="padding:0 1rem 1rem;">Multi halaman HTML/CSS/JS</p></div>
-                <div class="project-card" onclick="alert('Proyek: AWS EC2 Deployment')"><div class="project-img"><i class="fab fa-aws"></i></div><h4 style="padding:1rem 1rem 0.3rem;">AWS EC2 Deployment</h4><p style="padding:0 1rem 1rem;">Cloud computing</p></div>
+                <div class="project-card" onclick="alert('Simulasi Jaringan Kantor MikroTik')"><div class="project-img"><i class="fas fa-network-wired"></i></div><h4>Simulasi Jaringan Kantor</h4><p>VLAN, routing, firewall</p></div>
+                <div class="project-card" onclick="alert('Debian Server LAMP + DNS')"><div class="project-img"><i class="fab fa-linux"></i></div><h4>Debian Server LAMP</h4><p>Web server & DNS</p></div>
+                <div class="project-card" onclick="alert('Vulnerability Assessment')"><div class="project-img"><i class="fas fa-shield-haltered"></i></div><h4>Vulnerability Assessment</h4><p>Scanning & hardening</p></div>
+                <div class="project-card" onclick="alert('Website WordPress')"><div class="project-img"><i class="fab fa-wordpress"></i></div><h4>Website WordPress</h4><p>Profil sekolah</p></div>
+                <div class="project-card" onclick="alert('Portofolio Web CEO')"><div class="project-img"><i class="fas fa-code"></i></div><h4>Portofolio Web CEO</h4><p>Multi halaman</p></div>
+                <div class="project-card" onclick="alert('AWS EC2 Deployment')"><div class="project-img"><i class="fab fa-aws"></i></div><h4>AWS EC2 Deployment</h4><p>Cloud computing</p></div>
             </div>
         </div>
 
-        <!-- SERTIFIKAT UPLOAD PDF -->
+        <!-- SERTIFIKAT -->
         <div id="page-sertifikat" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
-            <div class="cert-grid">
-                <div class="cert-card" onclick="uploadCertFile(this, 'cert1')">
-                    <div class="cert-preview" id="cert1Preview"><i class="fas fa-shield-haltered"></i><div class="file-name">Klik upload PDF</div></div>
-                    <div class="cert-info"><div class="cert-name">✅ Cybersecurity Essentials</div><div style="font-size:0.7rem;">Digitalent_Kominfo · Cisco</div></div>
-                </div>
-                <div class="cert-card" onclick="uploadCertFile(this, 'cert2')">
-                    <div class="cert-preview" id="cert2Preview"><i class="fas fa-router"></i><div class="file-name">Klik upload PDF</div></div>
-                    <div class="cert-info"><div class="cert-name">✅ MikroTik MTCNA</div><div style="font-size:0.7rem;">MikroTik Academy</div></div>
-                </div>
-                <div class="cert-card" onclick="uploadCertFile(this, 'cert3')">
-                    <div class="cert-preview" id="cert3Preview"><i class="fab fa-linux"></i><div class="file-name">Klik upload PDF</div></div>
-                    <div class="cert-info"><div class="cert-name">✅ Debian Server Administration</div><div style="font-size:0.7rem;">Linux Professional</div></div>
-                </div>
-                <div class="cert-card" onclick="uploadCertFile(this, 'cert4')">
-                    <div class="cert-preview" id="cert4Preview"><i class="fab fa-wordpress"></i><div class="file-name">Klik upload PDF</div></div>
-                    <div class="cert-info"><div class="cert-name">✅ WordPress Expert Certification</div><div style="font-size:0.7rem;">BNSP/LSP</div></div>
-                </div>
+            <div class="cert-grid" id="certGrid">
+                <!-- akan diisi JavaScript -->
             </div>
-            <p style="text-align:center; margin-top:1rem; font-size:0.7rem;"><i class="fas fa-file-pdf" style="color:#e74c3c;"></i> Klik pada sertifikat untuk upload file PDF asli!</p>
+            <p style="text-align:center; margin-top:1rem; font-size:0.6rem;">Klik sertifikat untuk upload file (PDF/Gambar)</p>
             <input type="file" id="certFileInput" accept=".pdf,image/*" style="display:none;">
         </div>
 
-        <!-- GALERI UPLOAD -->
+        <!-- GALERI -->
         <div id="page-galeri" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
-            <div class="galeri-grid" id="galeriGrid">
-                <div class="galeri-item" onclick="uploadGaleriImage(this, 0)"><i class="fas fa-plus-circle"></i><p>Klik Upload</p></div>
-                <div class="galeri-item" onclick="uploadGaleriImage(this, 1)"><i class="fas fa-plus-circle"></i><p>Klik Upload</p></div>
-                <div class="galeri-item" onclick="uploadGaleriImage(this, 2)"><i class="fas fa-plus-circle"></i><p>Klik Upload</p></div>
-                <div class="galeri-item" onclick="uploadGaleriImage(this, 3)"><i class="fas fa-plus-circle"></i><p>Klik Upload</p></div>
-                <div class="galeri-item" onclick="uploadGaleriImage(this, 4)"><i class="fas fa-plus-circle"></i><p>Klik Upload</p></div>
-                <div class="galeri-item" onclick="uploadGaleriImage(this, 5)"><i class="fas fa-plus-circle"></i><p>Klik Upload</p></div>
-            </div>
+            <div class="galeri-grid" id="galeriGrid"></div>
+            <p style="text-align:center; margin-top:1rem; font-size:0.6rem;">Klik kotak untuk upload foto kegiatan</p>
             <input type="file" id="galeriFileInput" accept="image/*" style="display:none;">
         </div>
 
@@ -635,17 +572,15 @@
         <div id="page-cv" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="white-card">
-                <h2 style="margin-bottom: 1rem;"><i class="fas fa-file-pdf" style="color:#e74c3c;"></i> Curriculum Vitae (CV) Saya</h2>
-                <p style="margin-bottom: 1.5rem; color:#475569;">Klik area di bawah untuk upload CV dari Canva (format PDF). CV akan langsung tampil dan bisa di-download.</p>
-                <div class="cv-upload-area" onclick="document.getElementById('cvFileInput').click()">
+                <h2 style="font-size: 1rem;"><i class="fas fa-file-pdf" style="color:#e74c3c;"></i> CV Saya</h2>
+                <div class="cv-upload-area" onclick="uploadCVViaClick()">
                     <i class="fas fa-cloud-upload-alt"></i>
-                    <h3>Klik untuk Upload CV (PDF)</h3>
-                    <p style="font-size: 0.8rem;">Support file PDF dari Canva</p>
+                    <p style="font-size: 0.7rem;">Klik untuk upload CV (PDF dari Canva)</p>
                 </div>
-                <input type="file" id="cvFileInput" accept=".pdf" style="display: none;" onchange="uploadCV(this)">
-                <div id="cvPreviewArea" class="cv-preview" style="display: none;">
+                <input type="file" id="cvFileInput" accept=".pdf" style="display:none;">
+                <div id="cvPreviewArea" class="cv-preview" style="display: none; margin-top: 1rem;">
                     <iframe id="cvIframe" src=""></iframe>
-                    <div><a id="downloadCvLink" class="btn-primary download-cv-btn" download><i class="fas fa-download"></i> Download CV (PDF)</a></div>
+                    <div style="margin-top: 0.5rem;"><a id="downloadCvLink" class="btn-primary" style="display: inline-block; padding: 0.4rem 1rem; font-size: 0.7rem;" download><i class="fas fa-download"></i> Download CV</a></div>
                 </div>
             </div>
         </div>
@@ -654,131 +589,216 @@
         <div id="page-kontak" class="page">
             <button class="back-button" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Kembali</button>
             <div class="white-card">
-                <h2><i class="fas fa-paper-plane" style="color:#1e6f5c;"></i> Hubungi Saya</h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1rem;">
-                    <div><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</div>
-                    <div><i class="fab fa-whatsapp"></i> 085771082319</div>
-                    <div><i class="fab fa-github"></i> github/abdulbasit-tjkt</div>
-                    <div><i class="fab fa-instagram"></i> @abdulbasit_</div>
+                <h2 style="font-size: 1rem;"><i class="fas fa-paper-plane" style="color:#1e6f5c;"></i> Hubungi Saya</h2>
+                <div style="margin-top: 0.8rem;">
+                    <p><i class="fas fa-envelope"></i> abdulbasitalfakih@smkwikrama.sch.id</p>
+                    <p><i class="fab fa-whatsapp"></i> 085771082319</p>
+                    <p><i class="fab fa-github"></i> github/abdulbasit-tjkt</p>
                 </div>
-                <div style="margin-top: 2rem; background:#e6f4f1; padding:1rem; border-radius:20px; text-align:center;">
-                    🚀 "Siap memberikan kontribusi terbaik selama PKL dengan skill TJKT yang saya miliki!"
+                <div style="margin-top: 1rem; background:#e6f4f1; padding:0.8rem; border-radius:16px; text-align:center; font-size:0.7rem;">
+                    🚀 "Siap memberikan kontribusi terbaik untuk PKL!"
                 </div>
             </div>
         </div>
 
-        <!-- DETAIL SKILL -->
-        <div id="page-mikrotik" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>MikroTik RouterOS</h2><p>Routing, NAT, Firewall, Bandwidth Management, Hotspot, VLAN</p></div></div>
-        <div id="page-debian" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>Debian Server</h2><p>LAMP Stack, Bind9 DNS, DHCP, SSH, FTP, Bash Script</p></div></div>
-        <div id="page-cyber" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>Cybersecurity</h2><p>Nmap, Firewall Hardening, Wireshark, Vulnerability Assessment</p></div></div>
-        <div id="page-wordpress" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>WordPress + Debian</h2><p>Instalasi WP di Debian, Custom Theme, Elementor, SEO</p></div></div>
-        <div id="page-webdev" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>Web Development</h2><p>HTML, CSS, JavaScript, PHP, MySQL, Responsive Design</p></div></div>
+        <!-- DETAIL SKILL HALAMAN -->
+        <div id="page-mikrotik" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>MikroTik RouterOS</h2><p>Routing, NAT, Firewall, Bandwidth, Hotspot, VLAN</p></div></div>
+        <div id="page-debian" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>Debian Server</h2><p>LAMP, Bind9 DNS, DHCP, SSH, FTP, Bash Script</p></div></div>
+        <div id="page-cyber" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>Cybersecurity</h2><p>Nmap, Firewall Hardening, Wireshark</p></div></div>
+        <div id="page-wordpress" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>WordPress + Debian</h2><p>Instalasi WP, Elementor, SEO</p></div></div>
+        <div id="page-webdev" class="page"><button class="back-button" onclick="showPage('skill')"><i class="fas fa-arrow-left"></i> Kembali</button><div class="white-card"><h2>Web Development</h2><p>HTML, CSS, JavaScript, PHP, MySQL</p></div></div>
     </div>
 
     <div class="footer">
-        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT · Networking · Server · Cybersecurity · Web Development
+        © 2026 Abdul Basit Al Fakih — SMK Wikrama Bogor | TJKT
     </div>
 </div>
 
 <script>
-    function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-        document.getElementById('page-' + pageId).classList.add('active-page');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    // ==================== DATA SERTIFIKAT ====================
+    const certData = [
+        { id: 'cert1', name: 'Cybersecurity Essentials', issuer: 'Digitalent_Kominfo · Cisco', icon: 'fas fa-shield-haltered' },
+        { id: 'cert2', name: 'MikroTik MTCNA', issuer: 'MikroTik Academy', icon: 'fas fa-router' },
+        { id: 'cert3', name: 'Debian Server Administration', issuer: 'Linux Professional', icon: 'fab fa-linux' },
+        { id: 'cert4', name: 'WordPress Expert Certification', issuer: 'BNSP/LSP', icon: 'fab fa-wordpress' }
+    ];
 
-    function showDetail(skillId) { showPage(skillId); }
-
-    // UPLOAD LOGO SMK WIKRAMA
-    function uploadLogo(input) {
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const logoContainer = document.getElementById('logoContainer');
-                logoContainer.innerHTML = `<img src="${e.target.result}" alt="Logo SMK Wikrama" style="width:100%; height:100%; object-fit:cover;">`;
-            };
-            reader.readAsDataURL(input.files[0]);
+    // ==================== LOAD DATA DARI localStorage ====================
+    function loadAllData() {
+        // Load foto profil
+        const savedPhoto = localStorage.getItem('profilePhoto');
+        if (savedPhoto) document.getElementById('profilePhoto').src = savedPhoto;
+        
+        // Load logo
+        const savedLogo = localStorage.getItem('logoImage');
+        if (savedLogo) {
+            document.getElementById('logoContainer').innerHTML = `<img src="${savedLogo}" style="width:100%; height:100%; object-fit:cover;">`;
+        }
+        
+        // Load sertifikat
+        loadCertificates();
+        
+        // Load galeri
+        loadGaleri();
+        
+        // Load CV
+        const savedCV = localStorage.getItem('cvFile');
+        if (savedCV) {
+            document.getElementById('cvIframe').src = savedCV;
+            document.getElementById('downloadCvLink').href = savedCV;
+            document.getElementById('cvPreviewArea').style.display = 'block';
         }
     }
-
-    // UPLOAD FOTO PROFIL
-    function uploadPhoto(input) {
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('profilePhoto').src = e.target.result;
-            };
-            reader.readAsDataURL(input.files[0]);
+    
+    function loadCertificates() {
+        const certGrid = document.getElementById('certGrid');
+        certGrid.innerHTML = '';
+        certData.forEach((cert, index) => {
+            const savedFile = localStorage.getItem(cert.id);
+            const previewHTML = savedFile ? 
+                (savedFile.startsWith('data:application/pdf') ? 
+                    `<i class="fas fa-file-pdf" style="font-size:2rem; color:#e74c3c;"></i><div class="file-name">📄 Sertifikat PDF</div><a href="${savedFile}" target="_blank" style="font-size:0.6rem;" onclick="event.stopPropagation()">📎 Buka PDF</a>` :
+                    `<img src="${savedFile}" alt="Sertifikat"><div class="file-name">📷 Sertifikat</div>`) :
+                `<i class="${cert.icon}" style="font-size:2rem;"></i><div class="file-name">Klik upload</div>`;
+            
+            const card = document.createElement('div');
+            card.className = 'cert-card';
+            card.onclick = () => uploadCertFile(cert.id);
+            card.innerHTML = `
+                <div class="cert-preview" id="${cert.id}Preview">${previewHTML}</div>
+                <div class="cert-info"><div class="cert-name">✅ ${cert.name}</div><div style="font-size:0.6rem;">${cert.issuer}</div></div>
+            `;
+            certGrid.appendChild(card);
+        });
+    }
+    
+    function loadGaleri() {
+        const galeriGrid = document.getElementById('galeriGrid');
+        galeriGrid.innerHTML = '';
+        for (let i = 0; i < 6; i++) {
+            const savedImage = localStorage.getItem(`galeri_${i}`);
+            const content = savedImage ? 
+                `<img src="${savedImage}" alt="Kegiatan"><p style="font-size:0.6rem;">Klik ganti</p>` :
+                `<i class="fas fa-plus-circle"></i><p style="font-size:0.6rem;">Klik Upload</p>`;
+            const item = document.createElement('div');
+            item.className = 'galeri-item';
+            item.onclick = () => uploadGaleriImage(i);
+            item.innerHTML = content;
+            galeriGrid.appendChild(item);
         }
     }
-
-    // UPLOAD SERTIFIKAT
-    function uploadCertFile(element, certId) {
-        document.getElementById('certFileInput').onchange = function(e) {
-            if (e.target.files && e.target.files[0]) {
-                const file = e.target.files[0];
-                const fileName = file.name;
-                const fileType = file.type;
-                const previewDiv = document.getElementById(certId + 'Preview');
-                
-                if (fileType === 'application/pdf') {
-                    const fileURL = URL.createObjectURL(file);
-                    previewDiv.innerHTML = `<i class="fas fa-file-pdf" style="font-size:2.5rem; color:#e74c3c;"></i>
-                        <div class="file-name">📄 ${fileName.length > 30 ? fileName.substring(0,27)+'...' : fileName}</div>
-                        <a href="${fileURL}" target="_blank" style="font-size:0.7rem; color:#1e6f5c;" onclick="event.stopPropagation()">📎 Buka PDF</a>`;
-                } else if (fileType.startsWith('image/')) {
-                    const reader = new FileReader();
-                    reader.onload = function(ev) {
-                        previewDiv.innerHTML = `<img src="${ev.target.result}" style="max-width:100%; max-height:100px;"><div class="file-name">📷 ${fileName}</div>`;
-                    };
-                    reader.readAsDataURL(file);
-                }
-            }
-            document.getElementById('certFileInput').value = '';
-        };
-        document.getElementById('certFileInput').click();
-    }
-
-    // UPLOAD GALERI
-    let galeriIndex = 0;
-    function uploadGaleriImage(element, index) {
-        galeriIndex = index;
-        document.getElementById('galeriFileInput').onchange = function(e) {
+    
+    // ==================== UPLOAD FUNCTIONS ====================
+    function uploadPhotoViaClick() {
+        const input = document.getElementById('photoInput');
+        input.onchange = function(e) {
             if (e.target.files && e.target.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function(ev) {
-                    const items = document.querySelectorAll('#galeriGrid .galeri-item');
-                    if (items[galeriIndex]) {
-                        items[galeriIndex].innerHTML = `<img src="${ev.target.result}" alt="Kegiatan"><p>Klik ganti</p>`;
-                    }
+                    const imgData = ev.target.result;
+                    document.getElementById('profilePhoto').src = imgData;
+                    localStorage.setItem('profilePhoto', imgData);
                 };
                 reader.readAsDataURL(e.target.files[0]);
             }
-            document.getElementById('galeriFileInput').value = '';
         };
-        document.getElementById('galeriFileInput').click();
+        input.click();
     }
-
-    // UPLOAD CV
-    function uploadCV(input) {
-        if (input.files && input.files[0]) {
-            const file = input.files[0];
-            if (file.type === 'application/pdf') {
-                const fileURL = URL.createObjectURL(file);
-                document.getElementById('cvIframe').src = fileURL;
-                document.getElementById('downloadCvLink').href = fileURL;
-                document.getElementById('cvPreviewArea').style.display = 'block';
-                setTimeout(() => document.getElementById('cvPreviewArea').scrollIntoView({ behavior: 'smooth' }), 100);
-            } else {
-                alert('❌ Hanya file PDF yang bisa diupload!');
+    
+    function uploadLogoViaClick() {
+        const input = document.getElementById('logoInput');
+        input.onchange = function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    const imgData = ev.target.result;
+                    document.getElementById('logoContainer').innerHTML = `<img src="${imgData}" style="width:100%; height:100%; object-fit:cover;">`;
+                    localStorage.setItem('logoImage', imgData);
+                };
+                reader.readAsDataURL(e.target.files[0]);
             }
-        }
+        };
+        input.click();
     }
-
+    
+    function uploadCertFile(certId) {
+        const input = document.getElementById('certFileInput');
+        input.onchange = function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    const fileData = ev.target.result;
+                    localStorage.setItem(certId, fileData);
+                    loadCertificates(); // refresh tampilan
+                    alert('✅ Sertifikat berhasil disimpan!');
+                };
+                reader.readAsDataURL(file);
+            }
+        };
+        input.click();
+    }
+    
+    function uploadGaleriImage(index) {
+        const input = document.getElementById('galeriFileInput');
+        input.onchange = function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    const imgData = ev.target.result;
+                    localStorage.setItem(`galeri_${index}`, imgData);
+                    loadGaleri(); // refresh tampilan
+                    alert('✅ Foto galeri berhasil disimpan!');
+                };
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        };
+        input.click();
+    }
+    
+    function uploadCVViaClick() {
+        const input = document.getElementById('cvFileInput');
+        input.onchange = function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const file = e.target.files[0];
+                if (file.type === 'application/pdf') {
+                    const reader = new FileReader();
+                    reader.onload = function(ev) {
+                        const fileData = ev.target.result;
+                        localStorage.setItem('cvFile', fileData);
+                        document.getElementById('cvIframe').src = fileData;
+                        document.getElementById('downloadCvLink').href = fileData;
+                        document.getElementById('cvPreviewArea').style.display = 'block';
+                        alert('✅ CV berhasil disimpan!');
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('❌ Hanya file PDF yang bisa diupload!');
+                }
+            }
+        };
+        input.click();
+    }
+    
+    // ==================== NAVIGASI ====================
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+        const target = document.getElementById('page-' + pageId);
+        if (target) target.classList.add('active-page');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function showDetail(skillId) {
+        showPage(skillId);
+    }
+    
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text);
-        alert('✅ ' + text + '\n\nTersalin!');
+        alert('✅ Tersalin!');
     }
+    
+    // Load semua data saat halaman dimuat
+    window.onload = loadAllData;
 </script>
 </body>
 </html>
